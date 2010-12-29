@@ -1,0 +1,74 @@
+\hypertarget{structmp__floating__pointer}{
+\section{mp\_\-floating\_\-pointer Struct Reference}
+\label{structmp__floating__pointer}\index{mp\_\-floating\_\-pointer@{mp\_\-floating\_\-pointer}}
+}
+
+
+\hyperlink{structmp__floating__pointer}{mp\_\-floating\_\-pointer} contains basic information about MultiProcessor system  
+
+
+
+
+{\ttfamily \#include $<$multiproc.h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+char \hyperlink{structmp__floating__pointer_a7a7d6817d70f64be4bfd36433f70aafa}{signature} \mbox{[}4\mbox{]}
+\item 
+uint32 \hyperlink{structmp__floating__pointer_aa3d9d8256dbd774b7c2dd6c18ad310e3}{physical\_\-address}
+\item 
+uint8 \hyperlink{structmp__floating__pointer_ade2aae9bc2dd565811eeed02d88f00e0}{length}
+\item 
+uint8 \hyperlink{structmp__floating__pointer_a82fa98b3895b4442d2fb20710b652613}{mp\_\-version}
+\item 
+uint8 \hyperlink{structmp__floating__pointer_a53870a8883745e14a0dc97693f6423d7}{checksum}
+\item 
+uint8 \hyperlink{structmp__floating__pointer_a6d79ccff9fab2288d0ac0a9702a8e8bd}{mp\_\-features} \mbox{[}5\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{structmp__floating__pointer}{mp\_\-floating\_\-pointer} contains basic information about MultiProcessor system \hyperlink{structmp__floating__pointer}{mp\_\-floating\_\-pointer} struct contains basic information about MultiProcessor system, including version of specification, it's features and address of configuration table.
+
+\begin{DoxySeeAlso}{See also}
+multiproc\_\-get\_\-floating\_\-pointer() 
+\end{DoxySeeAlso}
+
+
+\subsection{Field Documentation}
+\hypertarget{structmp__floating__pointer_a53870a8883745e14a0dc97693f6423d7}{
+\index{mp\_\-floating\_\-pointer@{mp\_\-floating\_\-pointer}!checksum@{checksum}}
+\index{checksum@{checksum}!mp_floating_pointer@{mp\_\-floating\_\-pointer}}
+\subsubsection[{checksum}]{\setlength{\rightskip}{0pt plus 5cm}uint8 {\bf mp\_\-floating\_\-pointer::checksum}}}
+\label{structmp__floating__pointer_a53870a8883745e14a0dc97693f6423d7}
+struct checksum, all struct fields must sum to 0 \hypertarget{structmp__floating__pointer_ade2aae9bc2dd565811eeed02d88f00e0}{
+\index{mp\_\-floating\_\-pointer@{mp\_\-floating\_\-pointer}!length@{length}}
+\index{length@{length}!mp_floating_pointer@{mp\_\-floating\_\-pointer}}
+\subsubsection[{length}]{\setlength{\rightskip}{0pt plus 5cm}uint8 {\bf mp\_\-floating\_\-pointer::length}}}
+\label{structmp__floating__pointer_ade2aae9bc2dd565811eeed02d88f00e0}
+(length of \hyperlink{structmp__floating__pointer}{mp\_\-floating\_\-pointer} in bytes)/16 \hypertarget{structmp__floating__pointer_a6d79ccff9fab2288d0ac0a9702a8e8bd}{
+\index{mp\_\-floating\_\-pointer@{mp\_\-floating\_\-pointer}!mp\_\-features@{mp\_\-features}}
+\index{mp\_\-features@{mp\_\-features}!mp_floating_pointer@{mp\_\-floating\_\-pointer}}
+\subsubsection[{mp\_\-features}]{\setlength{\rightskip}{0pt plus 5cm}uint8 {\bf mp\_\-floating\_\-pointer::mp\_\-features}\mbox{[}5\mbox{]}}}
+\label{structmp__floating__pointer_a6d79ccff9fab2288d0ac0a9702a8e8bd}
+table of features \hypertarget{structmp__floating__pointer_a82fa98b3895b4442d2fb20710b652613}{
+\index{mp\_\-floating\_\-pointer@{mp\_\-floating\_\-pointer}!mp\_\-version@{mp\_\-version}}
+\index{mp\_\-version@{mp\_\-version}!mp_floating_pointer@{mp\_\-floating\_\-pointer}}
+\subsubsection[{mp\_\-version}]{\setlength{\rightskip}{0pt plus 5cm}uint8 {\bf mp\_\-floating\_\-pointer::mp\_\-version}}}
+\label{structmp__floating__pointer_a82fa98b3895b4442d2fb20710b652613}
+MultiProcessor specification version \hypertarget{structmp__floating__pointer_aa3d9d8256dbd774b7c2dd6c18ad310e3}{
+\index{mp\_\-floating\_\-pointer@{mp\_\-floating\_\-pointer}!physical\_\-address@{physical\_\-address}}
+\index{physical\_\-address@{physical\_\-address}!mp_floating_pointer@{mp\_\-floating\_\-pointer}}
+\subsubsection[{physical\_\-address}]{\setlength{\rightskip}{0pt plus 5cm}uint32 {\bf mp\_\-floating\_\-pointer::physical\_\-address}}}
+\label{structmp__floating__pointer_aa3d9d8256dbd774b7c2dd6c18ad310e3}
+Physical address of configuration table. Please note, that when paging is enabled, you have to convert it to virtual address! \hypertarget{structmp__floating__pointer_a7a7d6817d70f64be4bfd36433f70aafa}{
+\index{mp\_\-floating\_\-pointer@{mp\_\-floating\_\-pointer}!signature@{signature}}
+\index{signature@{signature}!mp_floating_pointer@{mp\_\-floating\_\-pointer}}
+\subsubsection[{signature}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf mp\_\-floating\_\-pointer::signature}\mbox{[}4\mbox{]}}}
+\label{structmp__floating__pointer_a7a7d6817d70f64be4bfd36433f70aafa}
+signature, should always be \char`\"{}\_\-MP\_\-\char`\"{} 
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+kernel/multiproc/\hyperlink{multiproc_8h}{multiproc.h}\end{DoxyCompactItemize}

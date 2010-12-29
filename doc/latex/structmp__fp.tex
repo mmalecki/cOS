@@ -1,0 +1,74 @@
+\hypertarget{structmp__fp}{
+\section{mp\_\-fp Struct Reference}
+\label{structmp__fp}\index{mp\_\-fp@{mp\_\-fp}}
+}
+
+
+\hyperlink{structmp__fp}{mp\_\-fp} contains basic information about MultiProcessor system  
+
+
+
+
+{\ttfamily \#include $<$mp.h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+char \hyperlink{structmp__fp_ae6aa326faac247e8cfca9e23b575d7e0}{signature} \mbox{[}4\mbox{]}
+\item 
+uint32 \hyperlink{structmp__fp_ab714f4a6339f0a7bb19fec19c4e06877}{physical\_\-address}
+\item 
+uint8 \hyperlink{structmp__fp_a027a047614a3f10f65b691e4d118f751}{length}
+\item 
+uint8 \hyperlink{structmp__fp_a237961558ddc5aa91d18d84cd9a109fa}{mp\_\-version}
+\item 
+uint8 \hyperlink{structmp__fp_aa1aaa861e57ff7021fd7f2a446e986ec}{checksum}
+\item 
+uint8 \hyperlink{structmp__fp_aff7cb275110c037679f1ce06971fc3e9}{mp\_\-features} \mbox{[}5\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{structmp__fp}{mp\_\-fp} contains basic information about MultiProcessor system \hyperlink{structmp__fp}{mp\_\-fp} struct contains basic information about MultiProcessor system, including version of specification, it's features and address of configuration table.
+
+\begin{DoxySeeAlso}{See also}
+mp\_\-get\_\-fp() 
+\end{DoxySeeAlso}
+
+
+\subsection{Field Documentation}
+\hypertarget{structmp__fp_aa1aaa861e57ff7021fd7f2a446e986ec}{
+\index{mp\_\-fp@{mp\_\-fp}!checksum@{checksum}}
+\index{checksum@{checksum}!mp_fp@{mp\_\-fp}}
+\subsubsection[{checksum}]{\setlength{\rightskip}{0pt plus 5cm}uint8 {\bf mp\_\-fp::checksum}}}
+\label{structmp__fp_aa1aaa861e57ff7021fd7f2a446e986ec}
+struct checksum, all struct fields must sum to 0 \hypertarget{structmp__fp_a027a047614a3f10f65b691e4d118f751}{
+\index{mp\_\-fp@{mp\_\-fp}!length@{length}}
+\index{length@{length}!mp_fp@{mp\_\-fp}}
+\subsubsection[{length}]{\setlength{\rightskip}{0pt plus 5cm}uint8 {\bf mp\_\-fp::length}}}
+\label{structmp__fp_a027a047614a3f10f65b691e4d118f751}
+(length of mp\_\-floating\_\-pointer in bytes)/16 \hypertarget{structmp__fp_aff7cb275110c037679f1ce06971fc3e9}{
+\index{mp\_\-fp@{mp\_\-fp}!mp\_\-features@{mp\_\-features}}
+\index{mp\_\-features@{mp\_\-features}!mp_fp@{mp\_\-fp}}
+\subsubsection[{mp\_\-features}]{\setlength{\rightskip}{0pt plus 5cm}uint8 {\bf mp\_\-fp::mp\_\-features}\mbox{[}5\mbox{]}}}
+\label{structmp__fp_aff7cb275110c037679f1ce06971fc3e9}
+table of features \hypertarget{structmp__fp_a237961558ddc5aa91d18d84cd9a109fa}{
+\index{mp\_\-fp@{mp\_\-fp}!mp\_\-version@{mp\_\-version}}
+\index{mp\_\-version@{mp\_\-version}!mp_fp@{mp\_\-fp}}
+\subsubsection[{mp\_\-version}]{\setlength{\rightskip}{0pt plus 5cm}uint8 {\bf mp\_\-fp::mp\_\-version}}}
+\label{structmp__fp_a237961558ddc5aa91d18d84cd9a109fa}
+MultiProcessor specification version \hypertarget{structmp__fp_ab714f4a6339f0a7bb19fec19c4e06877}{
+\index{mp\_\-fp@{mp\_\-fp}!physical\_\-address@{physical\_\-address}}
+\index{physical\_\-address@{physical\_\-address}!mp_fp@{mp\_\-fp}}
+\subsubsection[{physical\_\-address}]{\setlength{\rightskip}{0pt plus 5cm}uint32 {\bf mp\_\-fp::physical\_\-address}}}
+\label{structmp__fp_ab714f4a6339f0a7bb19fec19c4e06877}
+Physical address of configuration table. Please note, that when paging is enabled, you have to convert it to virtual address! \hypertarget{structmp__fp_ae6aa326faac247e8cfca9e23b575d7e0}{
+\index{mp\_\-fp@{mp\_\-fp}!signature@{signature}}
+\index{signature@{signature}!mp_fp@{mp\_\-fp}}
+\subsubsection[{signature}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf mp\_\-fp::signature}\mbox{[}4\mbox{]}}}
+\label{structmp__fp_ae6aa326faac247e8cfca9e23b575d7e0}
+signature, should always be \char`\"{}\_\-MP\_\-\char`\"{} 
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+kernel/mp/\hyperlink{mp_8h}{mp.h}\end{DoxyCompactItemize}

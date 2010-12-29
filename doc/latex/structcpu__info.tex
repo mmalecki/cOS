@@ -1,0 +1,87 @@
+\hypertarget{structcpu__info}{
+\section{cpu\_\-info Struct Reference}
+\label{structcpu__info}\index{cpu\_\-info@{cpu\_\-info}}
+}
+
+
+\hyperlink{structcpu__info}{cpu\_\-info} structure carries information about CPU  
+
+
+
+
+{\ttfamily \#include $<$cpu.h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint32 \hyperlink{structcpu__info_a408fc5b4c8d16fc97807d1604d5dfbb8}{ecx\_\-features}
+\item 
+uint32 \hyperlink{structcpu__info_a3b64d4cb33224305ebe2f5f0613ed779}{edx\_\-features}
+\item 
+uint32 \hyperlink{structcpu__info_a8919ce198e487044c8e49ea7ccabf031}{max\_\-call}
+\item 
+\hypertarget{structcpu__info_ad6fd9f9e14dc2350e0a09100b2270d6e}{
+uint8 {\bfseries stepping}}
+\label{structcpu__info_ad6fd9f9e14dc2350e0a09100b2270d6e}
+
+\item 
+\hypertarget{structcpu__info_a2e9603f8370f6735c351c82f4290e88c}{
+uint8 {\bfseries model}}
+\label{structcpu__info_a2e9603f8370f6735c351c82f4290e88c}
+
+\item 
+\hypertarget{structcpu__info_a2e0f25fed158d9dba3f360e3d28df3f5}{
+uint8 {\bfseries family}}
+\label{structcpu__info_a2e0f25fed158d9dba3f360e3d28df3f5}
+
+\item 
+\hypertarget{structcpu__info_a9c10122aa80dc50d3a1118ae20d09d66}{
+uint8 {\bfseries type}}
+\label{structcpu__info_a9c10122aa80dc50d3a1118ae20d09d66}
+
+\item 
+uint32 \hyperlink{structcpu__info_a9476d29ea3c764482313d41dd36a90e4}{ext}
+\item 
+char $\ast$ \hyperlink{structcpu__info_a4f59bf448826ce3928390aef9e91b069}{vendor}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{structcpu__info}{cpu\_\-info} structure carries information about CPU \hyperlink{structcpu__info}{cpu\_\-info} structure is used by different parts of kernel to get to know what features has CPU got, who was it produced by, etc.
+
+\begin{DoxySeeAlso}{See also}
+cpu\_\-get\_\-info(), \href{http://wiki.osdev.org/CPUID}{\tt http://wiki.osdev.org/CPUID} 
+\end{DoxySeeAlso}
+
+
+\subsection{Field Documentation}
+\hypertarget{structcpu__info_a408fc5b4c8d16fc97807d1604d5dfbb8}{
+\index{cpu\_\-info@{cpu\_\-info}!ecx\_\-features@{ecx\_\-features}}
+\index{ecx\_\-features@{ecx\_\-features}!cpu_info@{cpu\_\-info}}
+\subsubsection[{ecx\_\-features}]{\setlength{\rightskip}{0pt plus 5cm}uint32 {\bf cpu\_\-info::ecx\_\-features}}}
+\label{structcpu__info_a408fc5b4c8d16fc97807d1604d5dfbb8}
+features information returned in ECX, may be bogus on old CPUs \hypertarget{structcpu__info_a3b64d4cb33224305ebe2f5f0613ed779}{
+\index{cpu\_\-info@{cpu\_\-info}!edx\_\-features@{edx\_\-features}}
+\index{edx\_\-features@{edx\_\-features}!cpu_info@{cpu\_\-info}}
+\subsubsection[{edx\_\-features}]{\setlength{\rightskip}{0pt plus 5cm}uint32 {\bf cpu\_\-info::edx\_\-features}}}
+\label{structcpu__info_a3b64d4cb33224305ebe2f5f0613ed779}
+features information returned in EDX \hypertarget{structcpu__info_a9476d29ea3c764482313d41dd36a90e4}{
+\index{cpu\_\-info@{cpu\_\-info}!ext@{ext}}
+\index{ext@{ext}!cpu_info@{cpu\_\-info}}
+\subsubsection[{ext}]{\setlength{\rightskip}{0pt plus 5cm}uint32 {\bf cpu\_\-info::ext}}}
+\label{structcpu__info_a9476d29ea3c764482313d41dd36a90e4}
+bitmask representing processor extensions, like SSE, which are especially interesting for kernel \hypertarget{structcpu__info_a8919ce198e487044c8e49ea7ccabf031}{
+\index{cpu\_\-info@{cpu\_\-info}!max\_\-call@{max\_\-call}}
+\index{max\_\-call@{max\_\-call}!cpu_info@{cpu\_\-info}}
+\subsubsection[{max\_\-call}]{\setlength{\rightskip}{0pt plus 5cm}uint32 {\bf cpu\_\-info::max\_\-call}}}
+\label{structcpu__info_a8919ce198e487044c8e49ea7ccabf031}
+holds information about maximum cpuid request \# \hypertarget{structcpu__info_a4f59bf448826ce3928390aef9e91b069}{
+\index{cpu\_\-info@{cpu\_\-info}!vendor@{vendor}}
+\index{vendor@{vendor}!cpu_info@{cpu\_\-info}}
+\subsubsection[{vendor}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ {\bf cpu\_\-info::vendor}}}
+\label{structcpu__info_a4f59bf448826ce3928390aef9e91b069}
+string of 13 (13th is ) characters representing CPU vendor 
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+hardware/cpu/\hyperlink{cpu_8h}{cpu.h}\end{DoxyCompactItemize}

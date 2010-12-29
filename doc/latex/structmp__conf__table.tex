@@ -1,0 +1,119 @@
+\hypertarget{structmp__conf__table}{
+\section{mp\_\-conf\_\-table Struct Reference}
+\label{structmp__conf__table}\index{mp\_\-conf\_\-table@{mp\_\-conf\_\-table}}
+}
+
+
+\hyperlink{structmp__conf__table}{mp\_\-conf\_\-table} contains configuration of MultiProcessor system  
+
+
+
+
+{\ttfamily \#include $<$mp.h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+char \hyperlink{structmp__conf__table_a6469f637456706ffec8a34d237d83be9}{signature} \mbox{[}4\mbox{]}
+\item 
+uint16 \hyperlink{structmp__conf__table_a7d51594cda122bf1e17a46f858bec308}{base\_\-table\_\-length}
+\item 
+uint8 \hyperlink{structmp__conf__table_a991b257536fb47235ce85a98037fa77e}{mp\_\-version}
+\item 
+uint8 \hyperlink{structmp__conf__table_a12817b7e6d451aa2eb298cbd602013d6}{checksum}
+\item 
+char \hyperlink{structmp__conf__table_a91c6bb3623dd54a5b90e4cf99a2bbc0d}{oem\_\-id} \mbox{[}8\mbox{]}
+\item 
+char \hyperlink{structmp__conf__table_afdc8029c16e64c7da8ce4b85366118ef}{product\_\-id} \mbox{[}12\mbox{]}
+\item 
+uint32 \hyperlink{structmp__conf__table_a6851b422f90446a3c1010d610ae66ea8}{oem\_\-table}
+\item 
+\hypertarget{structmp__conf__table_a0e860799ee644ba6c6d863cc4150241c}{
+uint16 {\bfseries oem\_\-table\_\-size}}
+\label{structmp__conf__table_a0e860799ee644ba6c6d863cc4150241c}
+
+\item 
+uint16 \hyperlink{structmp__conf__table_a89991590f1e56c3938c341e07682f5d3}{entry\_\-count}
+\item 
+uint32 \hyperlink{structmp__conf__table_ac801dc07338148b9752563295c5cfd2c}{local\_\-apic}
+\item 
+\hypertarget{structmp__conf__table_a8e5db223668230f3c116dfeaf38b8407}{
+uint16 {\bfseries extended\_\-table\_\-length}}
+\label{structmp__conf__table_a8e5db223668230f3c116dfeaf38b8407}
+
+\item 
+\hypertarget{structmp__conf__table_a3bbe086ca129e0610ef73d854b84b090}{
+uint8 {\bfseries extended\_\-table\_\-checksum}}
+\label{structmp__conf__table_a3bbe086ca129e0610ef73d854b84b090}
+
+\item 
+uint8 \hyperlink{structmp__conf__table_aa21f98f682bd9a35612d18e279cb223c}{reserved}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{structmp__conf__table}{mp\_\-conf\_\-table} contains configuration of MultiProcessor system mp\_\-floating\_\-pointer struct contains information about configuration of MultiProcessor system, including it's producer and address of local APIC.
+
+\begin{DoxySeeAlso}{See also}
+multiproc\_\-get\_\-conf\_\-table() 
+\end{DoxySeeAlso}
+
+
+\subsection{Field Documentation}
+\hypertarget{structmp__conf__table_a7d51594cda122bf1e17a46f858bec308}{
+\index{mp\_\-conf\_\-table@{mp\_\-conf\_\-table}!base\_\-table\_\-length@{base\_\-table\_\-length}}
+\index{base\_\-table\_\-length@{base\_\-table\_\-length}!mp_conf_table@{mp\_\-conf\_\-table}}
+\subsubsection[{base\_\-table\_\-length}]{\setlength{\rightskip}{0pt plus 5cm}uint16 {\bf mp\_\-conf\_\-table::base\_\-table\_\-length}}}
+\label{structmp__conf__table_a7d51594cda122bf1e17a46f858bec308}
+length of base configuration table \hypertarget{structmp__conf__table_a12817b7e6d451aa2eb298cbd602013d6}{
+\index{mp\_\-conf\_\-table@{mp\_\-conf\_\-table}!checksum@{checksum}}
+\index{checksum@{checksum}!mp_conf_table@{mp\_\-conf\_\-table}}
+\subsubsection[{checksum}]{\setlength{\rightskip}{0pt plus 5cm}uint8 {\bf mp\_\-conf\_\-table::checksum}}}
+\label{structmp__conf__table_a12817b7e6d451aa2eb298cbd602013d6}
+checksum of base conf. table, all base field must sum to 0 \hypertarget{structmp__conf__table_a89991590f1e56c3938c341e07682f5d3}{
+\index{mp\_\-conf\_\-table@{mp\_\-conf\_\-table}!entry\_\-count@{entry\_\-count}}
+\index{entry\_\-count@{entry\_\-count}!mp_conf_table@{mp\_\-conf\_\-table}}
+\subsubsection[{entry\_\-count}]{\setlength{\rightskip}{0pt plus 5cm}uint16 {\bf mp\_\-conf\_\-table::entry\_\-count}}}
+\label{structmp__conf__table_a89991590f1e56c3938c341e07682f5d3}
+count of entries in base configuration table \hypertarget{structmp__conf__table_ac801dc07338148b9752563295c5cfd2c}{
+\index{mp\_\-conf\_\-table@{mp\_\-conf\_\-table}!local\_\-apic@{local\_\-apic}}
+\index{local\_\-apic@{local\_\-apic}!mp_conf_table@{mp\_\-conf\_\-table}}
+\subsubsection[{local\_\-apic}]{\setlength{\rightskip}{0pt plus 5cm}uint32 {\bf mp\_\-conf\_\-table::local\_\-apic}}}
+\label{structmp__conf__table_ac801dc07338148b9752563295c5cfd2c}
+base address of local APIC \hypertarget{structmp__conf__table_a991b257536fb47235ce85a98037fa77e}{
+\index{mp\_\-conf\_\-table@{mp\_\-conf\_\-table}!mp\_\-version@{mp\_\-version}}
+\index{mp\_\-version@{mp\_\-version}!mp_conf_table@{mp\_\-conf\_\-table}}
+\subsubsection[{mp\_\-version}]{\setlength{\rightskip}{0pt plus 5cm}uint8 {\bf mp\_\-conf\_\-table::mp\_\-version}}}
+\label{structmp__conf__table_a991b257536fb47235ce85a98037fa77e}
+MultiProcessor specification version \hypertarget{structmp__conf__table_a91c6bb3623dd54a5b90e4cf99a2bbc0d}{
+\index{mp\_\-conf\_\-table@{mp\_\-conf\_\-table}!oem\_\-id@{oem\_\-id}}
+\index{oem\_\-id@{oem\_\-id}!mp_conf_table@{mp\_\-conf\_\-table}}
+\subsubsection[{oem\_\-id}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf mp\_\-conf\_\-table::oem\_\-id}\mbox{[}8\mbox{]}}}
+\label{structmp__conf__table_a91c6bb3623dd54a5b90e4cf99a2bbc0d}
+manufacturer ID \hypertarget{structmp__conf__table_a6851b422f90446a3c1010d610ae66ea8}{
+\index{mp\_\-conf\_\-table@{mp\_\-conf\_\-table}!oem\_\-table@{oem\_\-table}}
+\index{oem\_\-table@{oem\_\-table}!mp_conf_table@{mp\_\-conf\_\-table}}
+\subsubsection[{oem\_\-table}]{\setlength{\rightskip}{0pt plus 5cm}uint32 {\bf mp\_\-conf\_\-table::oem\_\-table}}}
+\label{structmp__conf__table_a6851b422f90446a3c1010d610ae66ea8}
+physical address of OEM table \hypertarget{structmp__conf__table_afdc8029c16e64c7da8ce4b85366118ef}{
+\index{mp\_\-conf\_\-table@{mp\_\-conf\_\-table}!product\_\-id@{product\_\-id}}
+\index{product\_\-id@{product\_\-id}!mp_conf_table@{mp\_\-conf\_\-table}}
+\subsubsection[{product\_\-id}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf mp\_\-conf\_\-table::product\_\-id}\mbox{[}12\mbox{]}}}
+\label{structmp__conf__table_afdc8029c16e64c7da8ce4b85366118ef}
+product family ID \hypertarget{structmp__conf__table_aa21f98f682bd9a35612d18e279cb223c}{
+\index{mp\_\-conf\_\-table@{mp\_\-conf\_\-table}!reserved@{reserved}}
+\index{reserved@{reserved}!mp_conf_table@{mp\_\-conf\_\-table}}
+\subsubsection[{reserved}]{\setlength{\rightskip}{0pt plus 5cm}uint8 {\bf mp\_\-conf\_\-table::reserved}}}
+\label{structmp__conf__table_aa21f98f682bd9a35612d18e279cb223c}
+\char`\"{}Get out of here, it's my place!\char`\"{} -\/ said The Great Imperor Intel.
+
+\char`\"{}Yes, my master\char`\"{} -\/ answered programmers, and from that day nobody used reserved bytes. \hypertarget{structmp__conf__table_a6469f637456706ffec8a34d237d83be9}{
+\index{mp\_\-conf\_\-table@{mp\_\-conf\_\-table}!signature@{signature}}
+\index{signature@{signature}!mp_conf_table@{mp\_\-conf\_\-table}}
+\subsubsection[{signature}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf mp\_\-conf\_\-table::signature}\mbox{[}4\mbox{]}}}
+\label{structmp__conf__table_a6469f637456706ffec8a34d237d83be9}
+signature, should always be \char`\"{}PCMP\char`\"{} 
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+kernel/mp/\hyperlink{mp_8h}{mp.h}\end{DoxyCompactItemize}

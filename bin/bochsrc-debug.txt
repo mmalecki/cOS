@@ -1,0 +1,8 @@
+megs: 256
+floppya: 1_44=floppy.img, status=inserted
+boot: a
+log: bochsout.txt
+mouse: enabled=0
+clock: sync=realtime
+cpu: ips=500000
+magic_break: enabled=1

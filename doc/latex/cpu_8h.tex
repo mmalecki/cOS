@@ -1,0 +1,133 @@
+\hypertarget{cpu_8h}{
+\section{hardware/cpu/cpu.h File Reference}
+\label{cpu_8h}\index{hardware/cpu/cpu.h@{hardware/cpu/cpu.h}}
+}
+
+
+CPU functions.  
+
+
+{\ttfamily \#include \char`\"{}types.h\char`\"{}}\par
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structcpu__info}{cpu\_\-info}
+\begin{DoxyCompactList}\small\item\em \hyperlink{structcpu__info}{cpu\_\-info} structure carries information about CPU \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{cpu_8h_a2839f63bc10e21bb08bb5e8fcf382e99}{
+\#define {\bfseries CPU\_\-INIT\_\-FPU}~1}
+\label{cpu_8h_a2839f63bc10e21bb08bb5e8fcf382e99}
+
+\item 
+\hypertarget{cpu_8h_ad50808b4c160212464f707ee47f211a4}{
+\#define {\bfseries CPU\_\-INIT\_\-CPUID}~2}
+\label{cpu_8h_ad50808b4c160212464f707ee47f211a4}
+
+\item 
+\hypertarget{cpu_8h_af7f3bdc609ac4f3ecfff635407ead956}{
+\#define {\bfseries CPU\_\-INIT\_\-ALL}~CPU\_\-INIT\_\-FPU $|$ CPU\_\-INIT\_\-CPUID}
+\label{cpu_8h_af7f3bdc609ac4f3ecfff635407ead956}
+
+\item 
+\hypertarget{cpu_8h_a958c742b7c9cfdc29b3daef04790612c}{
+\#define {\bfseries CPUID\_\-GET\_\-VENDOR}~0}
+\label{cpu_8h_a958c742b7c9cfdc29b3daef04790612c}
+
+\item 
+\hypertarget{cpu_8h_a3d575fcb79a5217a03dad4a085bae41c}{
+\#define {\bfseries CPUID\_\-GET\_\-FEATURES}~1}
+\label{cpu_8h_a3d575fcb79a5217a03dad4a085bae41c}
+
+\item 
+\hypertarget{cpu_8h_a49594e56847c5787bc6277f9e5aba20e}{
+\#define {\bfseries CPUID\_\-STEPPING}(eax)~(eax \& 0x0F)}
+\label{cpu_8h_a49594e56847c5787bc6277f9e5aba20e}
+
+\item 
+\hypertarget{cpu_8h_a121953b2a89e9a12286aa324b7028347}{
+\#define {\bfseries CPUID\_\-MODEL}(eax)~((eax $>$$>$ 4) \& 0x0F)}
+\label{cpu_8h_a121953b2a89e9a12286aa324b7028347}
+
+\item 
+\hypertarget{cpu_8h_a12ff412ac760d4fe800ebf17692f294d}{
+\#define {\bfseries CPUID\_\-FAMILY}(eax)~((eax $>$$>$ 8) \& 0x0F)}
+\label{cpu_8h_a12ff412ac760d4fe800ebf17692f294d}
+
+\item 
+\hypertarget{cpu_8h_ae8d7c09c08b607c22639acf91e67ac83}{
+\#define {\bfseries CPUID\_\-TYPE}(eax)~((eax $>$$>$ 12) \& 0x0F)}
+\label{cpu_8h_ae8d7c09c08b607c22639acf91e67ac83}
+
+\item 
+\hypertarget{cpu_8h_a0bb7611d930e2f0524c36b37e841a18b}{
+\#define {\bfseries CPUID\_\-FEATURE\_\-EDX\_\-SSE}~(1 $<$$<$ 25)}
+\label{cpu_8h_a0bb7611d930e2f0524c36b37e841a18b}
+
+\item 
+\hypertarget{cpu_8h_a975d040e12628bfd8fbc83323cdfba32}{
+\#define {\bfseries CPUID\_\-FEATURE\_\-EDX\_\-SSE2}~(1 $<$$<$ 26)}
+\label{cpu_8h_a975d040e12628bfd8fbc83323cdfba32}
+
+\item 
+\hypertarget{cpu_8h_aeced69e1c939565f600e9990b6d14b63}{
+\#define {\bfseries CPU\_\-SUPPORTS}(bitmask, feature)~(bitmask \& CPUID\_\-FEATURE\_\-\#\#feature)}
+\label{cpu_8h_aeced69e1c939565f600e9990b6d14b63}
+
+\item 
+\hypertarget{cpu_8h_a6e5f9cb87d297c7402c040f74ae5a5a4}{
+\#define {\bfseries CPU\_\-EXT\_\-SSE}~(1)}
+\label{cpu_8h_a6e5f9cb87d297c7402c040f74ae5a5a4}
+
+\item 
+\hypertarget{cpu_8h_ad41df697f3a15e6303aedda718afdebb}{
+\#define {\bfseries CPU\_\-EXT\_\-SSE2}~(1 $<$$<$ 1)}
+\label{cpu_8h_ad41df697f3a15e6303aedda718afdebb}
+
+\item 
+\hypertarget{cpu_8h_a86e7c304f98a57c3d735e2448af6b43a}{
+\#define {\bfseries CPU\_\-EXT}(bitmask, ext)~(bitmask \& CPU\_\-EXT\_\-\#\#ext)}
+\label{cpu_8h_a86e7c304f98a57c3d735e2448af6b43a}
+
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{cpu_8h_a5d0444e34676b8c836666095091ceb88}{
+typedef struct \hyperlink{structcpu__info}{cpu\_\-info} {\bfseries cpu\_\-info\_\-t}}
+\label{cpu_8h_a5d0444e34676b8c836666095091ceb88}
+
+\item 
+\hypertarget{cpu_8h_a5e7b48d578f1a9014623703d530c90cf}{
+typedef struct \hyperlink{structcpu__info}{cpu\_\-info} $\ast$ {\bfseries pcpu\_\-info\_\-t}}
+\label{cpu_8h_a5e7b48d578f1a9014623703d530c90cf}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{cpu_8h_a190385a026c4329e0fa68ce5aad53aad}{
+int {\bfseries cpu\_\-init} (int partial\_\-init)}
+\label{cpu_8h_a190385a026c4329e0fa68ce5aad53aad}
+
+\item 
+\hypertarget{cpu_8h_a304c9d49317e24b304a33cb4094a284c}{
+bool {\bfseries cpu\_\-fpu\_\-initialize} ()}
+\label{cpu_8h_a304c9d49317e24b304a33cb4094a284c}
+
+\item 
+\hypertarget{cpu_8h_ace0ebe1fcaf48895f6c98de348d89a13}{
+\hyperlink{structcpu__info}{cpu\_\-info\_\-t} $\ast$ {\bfseries cpu\_\-get\_\-info} ()}
+\label{cpu_8h_ace0ebe1fcaf48895f6c98de348d89a13}
+
+\item 
+\hypertarget{cpu_8h_afc35d9f68a54180c4832efa36fe35391}{
+void {\bfseries cpuid} (uint32 request, uint32 $\ast$eax, uint32 $\ast$ebx, uint32 $\ast$ecx, uint32 $\ast$edx)}
+\label{cpu_8h_afc35d9f68a54180c4832efa36fe35391}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+CPU functions. \hyperlink{cpu_8h}{cpu.h} defines functions and structures used by kernel to perform basic CPU operations (ie. CPUID, FPU initialization). 

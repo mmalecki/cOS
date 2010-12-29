@@ -1,0 +1,225 @@
+\hypertarget{multiproc_8h}{
+\section{kernel/multiproc/multiproc.h File Reference}
+\label{multiproc_8h}\index{kernel/multiproc/multiproc.h@{kernel/multiproc/multiproc.h}}
+}
+
+
+MultiProcessor functions.  
+
+
+{\ttfamily \#include \char`\"{}types.h\char`\"{}}\par
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structmp__floating__pointer}{mp\_\-floating\_\-pointer}
+\begin{DoxyCompactList}\small\item\em \hyperlink{structmp__floating__pointer}{mp\_\-floating\_\-pointer} contains basic information about MultiProcessor system \item\end{DoxyCompactList}\item 
+struct \hyperlink{structmp__conf__table}{mp\_\-conf\_\-table}
+\begin{DoxyCompactList}\small\item\em \hyperlink{structmp__conf__table}{mp\_\-conf\_\-table} contains configuration of MultiProcessor system \item\end{DoxyCompactList}\item 
+struct \hyperlink{structmp__processor__entry}{mp\_\-processor\_\-entry}
+\begin{DoxyCompactList}\small\item\em Contains information about each processor in multiprocessor system. \item\end{DoxyCompactList}\item 
+struct \hyperlink{structmp__bus__entry}{mp\_\-bus\_\-entry}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{multiproc_8h_ada423e8d14dea410d9092e04ad8b61a5}{
+struct \hyperlink{structmp__floating__pointer}{mp\_\-floating\_\-pointer} {\bfseries \_\-\_\-attribute\_\-\_\-} ((packed)) mp\_\-floating\_\-pointer\_\-t}
+\label{multiproc_8h_ada423e8d14dea410d9092e04ad8b61a5}
+
+\item 
+\hypertarget{multiproc_8h_a0419a4b28e4a0cdc31732a07b6c17412}{
+mp\_\-floating\_\-pointer\_\-t $\ast$ {\bfseries multiproc\_\-find\_\-floating\_\-pointer} (void $\ast$addr, uint32 len)}
+\label{multiproc_8h_a0419a4b28e4a0cdc31732a07b6c17412}
+
+\item 
+\hypertarget{multiproc_8h_a94ca493f697c5d175f328ce519ae68a9}{
+mp\_\-floating\_\-pointer\_\-t $\ast$ {\bfseries multiproc\_\-get\_\-floating\_\-pointer} ()}
+\label{multiproc_8h_a94ca493f697c5d175f328ce519ae68a9}
+
+\item 
+\hypertarget{multiproc_8h_af9c57066051d4ce75ab1f26e2e840017}{
+mp\_\-conf\_\-table\_\-t $\ast$ {\bfseries multiproc\_\-get\_\-conf\_\-table} ()}
+\label{multiproc_8h_af9c57066051d4ce75ab1f26e2e840017}
+
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+char \hyperlink{multiproc_8h_a6035aaa282f9d41e09816b80316e853a}{signature} \mbox{[}4\mbox{]}
+\item 
+uint32 \hyperlink{multiproc_8h_a2e0b110950b6e249db2c4801369123cb}{physical\_\-address}
+\item 
+uint8 \hyperlink{multiproc_8h_a22a754e837a69515de66af1d0911ad2a}{length}
+\item 
+uint8 \hyperlink{multiproc_8h_afa1c4502d42fa063991fdfac48ecfafc}{mp\_\-version}
+\item 
+uint8 \hyperlink{multiproc_8h_a9a5da5400d666b05aaec55a5760d72b6}{checksum}
+\item 
+uint8 \hyperlink{multiproc_8h_a7ee25b903467227c0e475b0db0feeaf2}{mp\_\-features} \mbox{[}5\mbox{]}
+\item 
+uint16 \hyperlink{multiproc_8h_ab1ee11e28b58b52ff5957dd3867b5188}{base\_\-table\_\-length}
+\item 
+char \hyperlink{multiproc_8h_a61737a3ceb5989198484abfae1f9674a}{oem\_\-id} \mbox{[}8\mbox{]}
+\item 
+char \hyperlink{multiproc_8h_a17f1c30301b57635f184d4fb04bd12e3}{product\_\-id} \mbox{[}12\mbox{]}
+\item 
+uint32 \hyperlink{multiproc_8h_aaf31e8c570c2f58c50dc83e8235f1aac}{oem\_\-table}
+\item 
+\hypertarget{multiproc_8h_ad8c2018798f90ea1f59679715618840e}{
+uint16 {\bfseries oem\_\-table\_\-size}}
+\label{multiproc_8h_ad8c2018798f90ea1f59679715618840e}
+
+\item 
+uint16 \hyperlink{multiproc_8h_a36fc2026f609731f0bf9f6d6f0f827ea}{entry\_\-count}
+\item 
+uint32 \hyperlink{multiproc_8h_a9f949be4a2a9f89a1c78aa2e6e9b1a47}{local\_\-apic}
+\item 
+\hypertarget{multiproc_8h_a7d768db68f3fcf226126f3cc3ddb23a9}{
+uint16 {\bfseries extended\_\-table\_\-length}}
+\label{multiproc_8h_a7d768db68f3fcf226126f3cc3ddb23a9}
+
+\item 
+\hypertarget{multiproc_8h_a22badca0b1aef261d79fa800a6c01f77}{
+uint8 {\bfseries extended\_\-table\_\-checksum}}
+\label{multiproc_8h_a22badca0b1aef261d79fa800a6c01f77}
+
+\item 
+uint8 \hyperlink{multiproc_8h_ab3fd3e5f7bb36e0b63ec3576b73b18cb}{reserved}
+\item 
+uint8 \hyperlink{multiproc_8h_a41afb6792986647a70fc8f2a5f657388}{entry\_\-type}
+\item 
+\hypertarget{multiproc_8h_a9fd298bf33f1c0438f3d116af952d56b}{
+uint8 {\bfseries local\_\-apic\_\-id}}
+\label{multiproc_8h_a9fd298bf33f1c0438f3d116af952d56b}
+
+\item 
+uint8 \hyperlink{multiproc_8h_a4a695c3c979360a8ddd93ce0fb12fc10}{local\_\-apic\_\-version}
+\item 
+uint8 \hyperlink{multiproc_8h_a6c6c624ebea3349e191885f38a7a5a15}{cpu\_\-flags}
+\item 
+uint32 \hyperlink{multiproc_8h_a6f3e952f7f37f155ae904546af2af798}{cpu\_\-signature}
+\item 
+uint32 \hyperlink{multiproc_8h_a44bd393035031fa655b8ab06a31b5009}{features}
+\item 
+uint8 \hyperlink{multiproc_8h_ab41c7857fbc69cd67fd9b8f5555ee495}{bus\_\-id}
+\item 
+char \hyperlink{multiproc_8h_ab8b0ebf0ba484a22b843faa4f1156b30}{bus\_\-type} \mbox{[}6\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+MultiProcessor functions. \begin{DoxyAuthor}{Author}
+Maciej Małecki
+\end{DoxyAuthor}
+\hyperlink{multiproc_8h}{multiproc.h} defines functions used by kernel to perform operations on multiple processor or just MultiProcessor-\/compliant systems 
+
+\subsection{Variable Documentation}
+\hypertarget{multiproc_8h_ab1ee11e28b58b52ff5957dd3867b5188}{
+\index{multiproc.h@{multiproc.h}!base\_\-table\_\-length@{base\_\-table\_\-length}}
+\index{base\_\-table\_\-length@{base\_\-table\_\-length}!multiproc.h@{multiproc.h}}
+\subsubsection[{base\_\-table\_\-length}]{\setlength{\rightskip}{0pt plus 5cm}uint16 {\bf base\_\-table\_\-length}}}
+\label{multiproc_8h_ab1ee11e28b58b52ff5957dd3867b5188}
+length of base configuration table \hypertarget{multiproc_8h_ab41c7857fbc69cd67fd9b8f5555ee495}{
+\index{multiproc.h@{multiproc.h}!bus\_\-id@{bus\_\-id}}
+\index{bus\_\-id@{bus\_\-id}!multiproc.h@{multiproc.h}}
+\subsubsection[{bus\_\-id}]{\setlength{\rightskip}{0pt plus 5cm}uint8 {\bf bus\_\-id}}}
+\label{multiproc_8h_ab41c7857fbc69cd67fd9b8f5555ee495}
+unique bus id \hypertarget{multiproc_8h_ab8b0ebf0ba484a22b843faa4f1156b30}{
+\index{multiproc.h@{multiproc.h}!bus\_\-type@{bus\_\-type}}
+\index{bus\_\-type@{bus\_\-type}!multiproc.h@{multiproc.h}}
+\subsubsection[{bus\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf bus\_\-type}\mbox{[}6\mbox{]}}}
+\label{multiproc_8h_ab8b0ebf0ba484a22b843faa4f1156b30}
+bus type in string form, blank-\/filled \hypertarget{multiproc_8h_a9a5da5400d666b05aaec55a5760d72b6}{
+\index{multiproc.h@{multiproc.h}!checksum@{checksum}}
+\index{checksum@{checksum}!multiproc.h@{multiproc.h}}
+\subsubsection[{checksum}]{\setlength{\rightskip}{0pt plus 5cm}uint8 {\bf checksum}}}
+\label{multiproc_8h_a9a5da5400d666b05aaec55a5760d72b6}
+struct checksum, all struct fields must sum to 0
+
+checksum of base conf. table, all base field must sum to 0 \hypertarget{multiproc_8h_a6c6c624ebea3349e191885f38a7a5a15}{
+\index{multiproc.h@{multiproc.h}!cpu\_\-flags@{cpu\_\-flags}}
+\index{cpu\_\-flags@{cpu\_\-flags}!multiproc.h@{multiproc.h}}
+\subsubsection[{cpu\_\-flags}]{\setlength{\rightskip}{0pt plus 5cm}uint8 {\bf cpu\_\-flags}}}
+\label{multiproc_8h_a6c6c624ebea3349e191885f38a7a5a15}
+describes each CPU (if is it usable and if is it a bootstrap processor) \hypertarget{multiproc_8h_a6f3e952f7f37f155ae904546af2af798}{
+\index{multiproc.h@{multiproc.h}!cpu\_\-signature@{cpu\_\-signature}}
+\index{cpu\_\-signature@{cpu\_\-signature}!multiproc.h@{multiproc.h}}
+\subsubsection[{cpu\_\-signature}]{\setlength{\rightskip}{0pt plus 5cm}uint32 {\bf cpu\_\-signature}}}
+\label{multiproc_8h_a6f3e952f7f37f155ae904546af2af798}
+contains information about each CPU (stepping, model, family) \hypertarget{multiproc_8h_a36fc2026f609731f0bf9f6d6f0f827ea}{
+\index{multiproc.h@{multiproc.h}!entry\_\-count@{entry\_\-count}}
+\index{entry\_\-count@{entry\_\-count}!multiproc.h@{multiproc.h}}
+\subsubsection[{entry\_\-count}]{\setlength{\rightskip}{0pt plus 5cm}uint16 {\bf entry\_\-count}}}
+\label{multiproc_8h_a36fc2026f609731f0bf9f6d6f0f827ea}
+count of entries in base configuration table \hypertarget{multiproc_8h_a41afb6792986647a70fc8f2a5f657388}{
+\index{multiproc.h@{multiproc.h}!entry\_\-type@{entry\_\-type}}
+\index{entry\_\-type@{entry\_\-type}!multiproc.h@{multiproc.h}}
+\subsubsection[{entry\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}uint8 {\bf entry\_\-type}}}
+\label{multiproc_8h_a41afb6792986647a70fc8f2a5f657388}
+specifies entry type in config. table, in \hyperlink{structmp__processor__entry}{mp\_\-processor\_\-entry} should always be 0
+
+specifies entry type in config. table, in \hyperlink{structmp__bus__entry}{mp\_\-bus\_\-entry} should always be 1 \hypertarget{multiproc_8h_a44bd393035031fa655b8ab06a31b5009}{
+\index{multiproc.h@{multiproc.h}!features@{features}}
+\index{features@{features}!multiproc.h@{multiproc.h}}
+\subsubsection[{features}]{\setlength{\rightskip}{0pt plus 5cm}uint32 {\bf features}}}
+\label{multiproc_8h_a44bd393035031fa655b8ab06a31b5009}
+describes CPU features \hypertarget{multiproc_8h_a22a754e837a69515de66af1d0911ad2a}{
+\index{multiproc.h@{multiproc.h}!length@{length}}
+\index{length@{length}!multiproc.h@{multiproc.h}}
+\subsubsection[{length}]{\setlength{\rightskip}{0pt plus 5cm}uint8 {\bf length}}}
+\label{multiproc_8h_a22a754e837a69515de66af1d0911ad2a}
+(length of \hyperlink{structmp__floating__pointer}{mp\_\-floating\_\-pointer} in bytes)/16 \hypertarget{multiproc_8h_a9f949be4a2a9f89a1c78aa2e6e9b1a47}{
+\index{multiproc.h@{multiproc.h}!local\_\-apic@{local\_\-apic}}
+\index{local\_\-apic@{local\_\-apic}!multiproc.h@{multiproc.h}}
+\subsubsection[{local\_\-apic}]{\setlength{\rightskip}{0pt plus 5cm}uint32 {\bf local\_\-apic}}}
+\label{multiproc_8h_a9f949be4a2a9f89a1c78aa2e6e9b1a47}
+base address of local APIC \hypertarget{multiproc_8h_a4a695c3c979360a8ddd93ce0fb12fc10}{
+\index{multiproc.h@{multiproc.h}!local\_\-apic\_\-version@{local\_\-apic\_\-version}}
+\index{local\_\-apic\_\-version@{local\_\-apic\_\-version}!multiproc.h@{multiproc.h}}
+\subsubsection[{local\_\-apic\_\-version}]{\setlength{\rightskip}{0pt plus 5cm}uint8 {\bf local\_\-apic\_\-version}}}
+\label{multiproc_8h_a4a695c3c979360a8ddd93ce0fb12fc10}
+version of local APIC \hypertarget{multiproc_8h_a7ee25b903467227c0e475b0db0feeaf2}{
+\index{multiproc.h@{multiproc.h}!mp\_\-features@{mp\_\-features}}
+\index{mp\_\-features@{mp\_\-features}!multiproc.h@{multiproc.h}}
+\subsubsection[{mp\_\-features}]{\setlength{\rightskip}{0pt plus 5cm}uint8 {\bf mp\_\-features}\mbox{[}5\mbox{]}}}
+\label{multiproc_8h_a7ee25b903467227c0e475b0db0feeaf2}
+table of features \hypertarget{multiproc_8h_afa1c4502d42fa063991fdfac48ecfafc}{
+\index{multiproc.h@{multiproc.h}!mp\_\-version@{mp\_\-version}}
+\index{mp\_\-version@{mp\_\-version}!multiproc.h@{multiproc.h}}
+\subsubsection[{mp\_\-version}]{\setlength{\rightskip}{0pt plus 5cm}uint8 {\bf mp\_\-version}}}
+\label{multiproc_8h_afa1c4502d42fa063991fdfac48ecfafc}
+MultiProcessor specification version \hypertarget{multiproc_8h_a61737a3ceb5989198484abfae1f9674a}{
+\index{multiproc.h@{multiproc.h}!oem\_\-id@{oem\_\-id}}
+\index{oem\_\-id@{oem\_\-id}!multiproc.h@{multiproc.h}}
+\subsubsection[{oem\_\-id}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf oem\_\-id}\mbox{[}8\mbox{]}}}
+\label{multiproc_8h_a61737a3ceb5989198484abfae1f9674a}
+manufacturer ID \hypertarget{multiproc_8h_aaf31e8c570c2f58c50dc83e8235f1aac}{
+\index{multiproc.h@{multiproc.h}!oem\_\-table@{oem\_\-table}}
+\index{oem\_\-table@{oem\_\-table}!multiproc.h@{multiproc.h}}
+\subsubsection[{oem\_\-table}]{\setlength{\rightskip}{0pt plus 5cm}uint32 {\bf oem\_\-table}}}
+\label{multiproc_8h_aaf31e8c570c2f58c50dc83e8235f1aac}
+physical address of OEM table \hypertarget{multiproc_8h_a2e0b110950b6e249db2c4801369123cb}{
+\index{multiproc.h@{multiproc.h}!physical\_\-address@{physical\_\-address}}
+\index{physical\_\-address@{physical\_\-address}!multiproc.h@{multiproc.h}}
+\subsubsection[{physical\_\-address}]{\setlength{\rightskip}{0pt plus 5cm}uint32 {\bf physical\_\-address}}}
+\label{multiproc_8h_a2e0b110950b6e249db2c4801369123cb}
+Physical address of configuration table. Please note, that when paging is enabled, you have to convert it to virtual address! \hypertarget{multiproc_8h_a17f1c30301b57635f184d4fb04bd12e3}{
+\index{multiproc.h@{multiproc.h}!product\_\-id@{product\_\-id}}
+\index{product\_\-id@{product\_\-id}!multiproc.h@{multiproc.h}}
+\subsubsection[{product\_\-id}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf product\_\-id}\mbox{[}12\mbox{]}}}
+\label{multiproc_8h_a17f1c30301b57635f184d4fb04bd12e3}
+product family ID \hypertarget{multiproc_8h_ab3fd3e5f7bb36e0b63ec3576b73b18cb}{
+\index{multiproc.h@{multiproc.h}!reserved@{reserved}}
+\index{reserved@{reserved}!multiproc.h@{multiproc.h}}
+\subsubsection[{reserved}]{\setlength{\rightskip}{0pt plus 5cm}uint32 {\bf reserved}}}
+\label{multiproc_8h_ab3fd3e5f7bb36e0b63ec3576b73b18cb}
+\char`\"{}Get out of here, it's my place!\char`\"{} -\/ said The Great Imperor Intel. We'll respect it.
+
+is there a real need to describe these? \hypertarget{multiproc_8h_a6035aaa282f9d41e09816b80316e853a}{
+\index{multiproc.h@{multiproc.h}!signature@{signature}}
+\index{signature@{signature}!multiproc.h@{multiproc.h}}
+\subsubsection[{signature}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf signature}}}
+\label{multiproc_8h_a6035aaa282f9d41e09816b80316e853a}
+signature, should always be \char`\"{}\_\-MP\_\-\char`\"{}
+
+signature, should always be \char`\"{}PCMP\char`\"{} 

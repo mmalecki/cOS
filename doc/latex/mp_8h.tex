@@ -1,0 +1,280 @@
+\hypertarget{mp_8h}{
+\section{kernel/mp/mp.h File Reference}
+\label{mp_8h}\index{kernel/mp/mp.h@{kernel/mp/mp.h}}
+}
+
+
+MultiProcessor functions.  
+
+
+{\ttfamily \#include \char`\"{}types.h\char`\"{}}\par
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structmp__fp}{mp\_\-fp}
+\begin{DoxyCompactList}\small\item\em \hyperlink{structmp__fp}{mp\_\-fp} contains basic information about MultiProcessor system \item\end{DoxyCompactList}\item 
+struct \hyperlink{structmp__conf__table}{mp\_\-conf\_\-table}
+\begin{DoxyCompactList}\small\item\em \hyperlink{structmp__conf__table}{mp\_\-conf\_\-table} contains configuration of MultiProcessor system \item\end{DoxyCompactList}\item 
+struct \hyperlink{structmp__processor__entry}{mp\_\-processor\_\-entry}
+\begin{DoxyCompactList}\small\item\em Contains information about each processor in multiprocessor system. \item\end{DoxyCompactList}\item 
+struct \hyperlink{structmp__bus__entry}{mp\_\-bus\_\-entry}
+\begin{DoxyCompactList}\small\item\em Contains information about each bus installed in system. \item\end{DoxyCompactList}\item 
+struct \hyperlink{structmp__io__apic__entry}{mp\_\-io\_\-apic\_\-entry}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{mp_8h_ad3f94130f9ca10f27116016016deca38}{
+struct \hyperlink{structmp__fp}{mp\_\-fp} {\bfseries \_\-\_\-attribute\_\-\_\-} ((packed)) mp\_\-fp\_\-t}
+\label{mp_8h_ad3f94130f9ca10f27116016016deca38}
+
+\item 
+\hypertarget{mp_8h_aa913dc51f46babdf195d7c94604caf21}{
+mp\_\-fp\_\-t $\ast$ {\bfseries mp\_\-get\_\-fp} ()}
+\label{mp_8h_aa913dc51f46babdf195d7c94604caf21}
+
+\item 
+\hypertarget{mp_8h_a0179b6206a815777b8f3bedffd88c67b}{
+mp\_\-conf\_\-table\_\-t $\ast$ {\bfseries mp\_\-get\_\-conf\_\-table} ()}
+\label{mp_8h_a0179b6206a815777b8f3bedffd88c67b}
+
+\item 
+\hypertarget{mp_8h_a5667b49f68e221022dfd3a181b105a3f}{
+mp\_\-processor\_\-entry\_\-t $\ast$ {\bfseries mp\_\-get\_\-processors} ()}
+\label{mp_8h_a5667b49f68e221022dfd3a181b105a3f}
+
+\item 
+\hypertarget{mp_8h_ac05a56d64cdf9e8b9769f42548532fb4}{
+uint {\bfseries mp\_\-get\_\-processor\_\-count} ()}
+\label{mp_8h_ac05a56d64cdf9e8b9769f42548532fb4}
+
+\item 
+\hypertarget{mp_8h_accc8eb41b292192fd2d21940962897f2}{
+mp\_\-bus\_\-entry\_\-t $\ast$ {\bfseries mp\_\-get\_\-buses} ()}
+\label{mp_8h_accc8eb41b292192fd2d21940962897f2}
+
+\item 
+\hypertarget{mp_8h_a2a088845ffc726fd2ff0c556ff7ab2eb}{
+uint {\bfseries mp\_\-get\_\-bus\_\-count} ()}
+\label{mp_8h_a2a088845ffc726fd2ff0c556ff7ab2eb}
+
+\item 
+\hypertarget{mp_8h_a16c5e4d3d8910849d29f1fc05a2f68fc}{
+mp\_\-io\_\-apic\_\-entry\_\-t $\ast$ {\bfseries mp\_\-get\_\-io\_\-apics} ()}
+\label{mp_8h_a16c5e4d3d8910849d29f1fc05a2f68fc}
+
+\item 
+\hypertarget{mp_8h_ac00e2d7d84d93f2adcb23d4a7c8c028f}{
+uint {\bfseries mp\_\-get\_\-io\_\-apics\_\-count} ()}
+\label{mp_8h_ac00e2d7d84d93f2adcb23d4a7c8c028f}
+
+\item 
+\hypertarget{mp_8h_a0ac725951dc49ae4889b301b86d9bb56}{
+void {\bfseries mp\_\-init} ()}
+\label{mp_8h_a0ac725951dc49ae4889b301b86d9bb56}
+
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+char \hyperlink{mp_8h_a6035aaa282f9d41e09816b80316e853a}{signature} \mbox{[}4\mbox{]}
+\item 
+uint32 \hyperlink{mp_8h_a2e0b110950b6e249db2c4801369123cb}{physical\_\-address}
+\item 
+uint8 \hyperlink{mp_8h_a22a754e837a69515de66af1d0911ad2a}{length}
+\item 
+uint8 \hyperlink{mp_8h_afa1c4502d42fa063991fdfac48ecfafc}{mp\_\-version}
+\item 
+uint8 \hyperlink{mp_8h_a9a5da5400d666b05aaec55a5760d72b6}{checksum}
+\item 
+uint8 \hyperlink{mp_8h_a7ee25b903467227c0e475b0db0feeaf2}{mp\_\-features} \mbox{[}5\mbox{]}
+\item 
+uint16 \hyperlink{mp_8h_ab1ee11e28b58b52ff5957dd3867b5188}{base\_\-table\_\-length}
+\item 
+char \hyperlink{mp_8h_a61737a3ceb5989198484abfae1f9674a}{oem\_\-id} \mbox{[}8\mbox{]}
+\item 
+char \hyperlink{mp_8h_a17f1c30301b57635f184d4fb04bd12e3}{product\_\-id} \mbox{[}12\mbox{]}
+\item 
+uint32 \hyperlink{mp_8h_aaf31e8c570c2f58c50dc83e8235f1aac}{oem\_\-table}
+\item 
+\hypertarget{mp_8h_ad8c2018798f90ea1f59679715618840e}{
+uint16 {\bfseries oem\_\-table\_\-size}}
+\label{mp_8h_ad8c2018798f90ea1f59679715618840e}
+
+\item 
+uint16 \hyperlink{mp_8h_a36fc2026f609731f0bf9f6d6f0f827ea}{entry\_\-count}
+\item 
+uint32 \hyperlink{mp_8h_a9f949be4a2a9f89a1c78aa2e6e9b1a47}{local\_\-apic}
+\item 
+\hypertarget{mp_8h_a7d768db68f3fcf226126f3cc3ddb23a9}{
+uint16 {\bfseries extended\_\-table\_\-length}}
+\label{mp_8h_a7d768db68f3fcf226126f3cc3ddb23a9}
+
+\item 
+\hypertarget{mp_8h_a22badca0b1aef261d79fa800a6c01f77}{
+uint8 {\bfseries extended\_\-table\_\-checksum}}
+\label{mp_8h_a22badca0b1aef261d79fa800a6c01f77}
+
+\item 
+uint8 \hyperlink{mp_8h_ab3fd3e5f7bb36e0b63ec3576b73b18cb}{reserved}
+\item 
+uint8 \hyperlink{mp_8h_a41afb6792986647a70fc8f2a5f657388}{entry\_\-type}
+\item 
+\hypertarget{mp_8h_a9fd298bf33f1c0438f3d116af952d56b}{
+uint8 {\bfseries local\_\-apic\_\-id}}
+\label{mp_8h_a9fd298bf33f1c0438f3d116af952d56b}
+
+\item 
+uint8 \hyperlink{mp_8h_a4a695c3c979360a8ddd93ce0fb12fc10}{local\_\-apic\_\-version}
+\item 
+uint8 \hyperlink{mp_8h_a6c6c624ebea3349e191885f38a7a5a15}{cpu\_\-flags}
+\item 
+uint32 \hyperlink{mp_8h_a6f3e952f7f37f155ae904546af2af798}{cpu\_\-signature}
+\item 
+uint32 \hyperlink{mp_8h_a44bd393035031fa655b8ab06a31b5009}{features}
+\item 
+uint8 \hyperlink{mp_8h_ab41c7857fbc69cd67fd9b8f5555ee495}{bus\_\-id}
+\item 
+char \hyperlink{mp_8h_ab8b0ebf0ba484a22b843faa4f1156b30}{bus\_\-type} \mbox{[}6\mbox{]}
+\item 
+uint8 \hyperlink{mp_8h_af452e70f8897de3a89644d58fea388d8}{io\_\-apic\_\-id}
+\item 
+uint8 \hyperlink{mp_8h_adcb9e020b08a2a061419d8949f79c19a}{io\_\-apic\_\-version}
+\item 
+\hypertarget{mp_8h_a3994044fa5450d2302ed41e0bc8e69f9}{
+uint32 {\bfseries base\_\-address}}
+\label{mp_8h_a3994044fa5450d2302ed41e0bc8e69f9}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+MultiProcessor functions. \begin{DoxyAuthor}{Author}
+Maciej Małecki
+\end{DoxyAuthor}
+\hyperlink{mp_8h}{mp.h} defines functions used by kernel to perform operations on multiple processor or just MultiProcessor-\/compliant systems 
+
+\subsection{Variable Documentation}
+\hypertarget{mp_8h_ab1ee11e28b58b52ff5957dd3867b5188}{
+\index{mp.h@{mp.h}!base\_\-table\_\-length@{base\_\-table\_\-length}}
+\index{base\_\-table\_\-length@{base\_\-table\_\-length}!mp.h@{mp.h}}
+\subsubsection[{base\_\-table\_\-length}]{\setlength{\rightskip}{0pt plus 5cm}uint16 {\bf base\_\-table\_\-length}}}
+\label{mp_8h_ab1ee11e28b58b52ff5957dd3867b5188}
+length of base configuration table \hypertarget{mp_8h_ab41c7857fbc69cd67fd9b8f5555ee495}{
+\index{mp.h@{mp.h}!bus\_\-id@{bus\_\-id}}
+\index{bus\_\-id@{bus\_\-id}!mp.h@{mp.h}}
+\subsubsection[{bus\_\-id}]{\setlength{\rightskip}{0pt plus 5cm}uint8 {\bf bus\_\-id}}}
+\label{mp_8h_ab41c7857fbc69cd67fd9b8f5555ee495}
+unique bus id \hypertarget{mp_8h_ab8b0ebf0ba484a22b843faa4f1156b30}{
+\index{mp.h@{mp.h}!bus\_\-type@{bus\_\-type}}
+\index{bus\_\-type@{bus\_\-type}!mp.h@{mp.h}}
+\subsubsection[{bus\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf bus\_\-type}\mbox{[}6\mbox{]}}}
+\label{mp_8h_ab8b0ebf0ba484a22b843faa4f1156b30}
+bus type in string form, blank-\/filled \hypertarget{mp_8h_a9a5da5400d666b05aaec55a5760d72b6}{
+\index{mp.h@{mp.h}!checksum@{checksum}}
+\index{checksum@{checksum}!mp.h@{mp.h}}
+\subsubsection[{checksum}]{\setlength{\rightskip}{0pt plus 5cm}uint8 {\bf checksum}}}
+\label{mp_8h_a9a5da5400d666b05aaec55a5760d72b6}
+struct checksum, all struct fields must sum to 0
+
+checksum of base conf. table, all base field must sum to 0 \hypertarget{mp_8h_a6c6c624ebea3349e191885f38a7a5a15}{
+\index{mp.h@{mp.h}!cpu\_\-flags@{cpu\_\-flags}}
+\index{cpu\_\-flags@{cpu\_\-flags}!mp.h@{mp.h}}
+\subsubsection[{cpu\_\-flags}]{\setlength{\rightskip}{0pt plus 5cm}uint8 {\bf cpu\_\-flags}}}
+\label{mp_8h_a6c6c624ebea3349e191885f38a7a5a15}
+describes each CPU (if is it usable and if is it a bootstrap processor) \hypertarget{mp_8h_a6f3e952f7f37f155ae904546af2af798}{
+\index{mp.h@{mp.h}!cpu\_\-signature@{cpu\_\-signature}}
+\index{cpu\_\-signature@{cpu\_\-signature}!mp.h@{mp.h}}
+\subsubsection[{cpu\_\-signature}]{\setlength{\rightskip}{0pt plus 5cm}uint32 {\bf cpu\_\-signature}}}
+\label{mp_8h_a6f3e952f7f37f155ae904546af2af798}
+contains information about each CPU (stepping, model, family) \hypertarget{mp_8h_a36fc2026f609731f0bf9f6d6f0f827ea}{
+\index{mp.h@{mp.h}!entry\_\-count@{entry\_\-count}}
+\index{entry\_\-count@{entry\_\-count}!mp.h@{mp.h}}
+\subsubsection[{entry\_\-count}]{\setlength{\rightskip}{0pt plus 5cm}uint16 {\bf entry\_\-count}}}
+\label{mp_8h_a36fc2026f609731f0bf9f6d6f0f827ea}
+count of entries in base configuration table \hypertarget{mp_8h_a41afb6792986647a70fc8f2a5f657388}{
+\index{mp.h@{mp.h}!entry\_\-type@{entry\_\-type}}
+\index{entry\_\-type@{entry\_\-type}!mp.h@{mp.h}}
+\subsubsection[{entry\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}uint8 {\bf entry\_\-type}}}
+\label{mp_8h_a41afb6792986647a70fc8f2a5f657388}
+specifies entry type in config. table, in \hyperlink{structmp__processor__entry}{mp\_\-processor\_\-entry} should always be 0
+
+specifies entry type in config. table, in \hyperlink{structmp__bus__entry}{mp\_\-bus\_\-entry} should always be 1
+
+specifies entry type in config. table, in \hyperlink{structmp__io__apic__entry}{mp\_\-io\_\-apic\_\-entry} should always be 1 \hypertarget{mp_8h_a44bd393035031fa655b8ab06a31b5009}{
+\index{mp.h@{mp.h}!features@{features}}
+\index{features@{features}!mp.h@{mp.h}}
+\subsubsection[{features}]{\setlength{\rightskip}{0pt plus 5cm}uint32 {\bf features}}}
+\label{mp_8h_a44bd393035031fa655b8ab06a31b5009}
+describes CPU features \hypertarget{mp_8h_af452e70f8897de3a89644d58fea388d8}{
+\index{mp.h@{mp.h}!io\_\-apic\_\-id@{io\_\-apic\_\-id}}
+\index{io\_\-apic\_\-id@{io\_\-apic\_\-id}!mp.h@{mp.h}}
+\subsubsection[{io\_\-apic\_\-id}]{\setlength{\rightskip}{0pt plus 5cm}uint8 {\bf io\_\-apic\_\-id}}}
+\label{mp_8h_af452e70f8897de3a89644d58fea388d8}
+unique identified of each I/O APIC \hypertarget{mp_8h_adcb9e020b08a2a061419d8949f79c19a}{
+\index{mp.h@{mp.h}!io\_\-apic\_\-version@{io\_\-apic\_\-version}}
+\index{io\_\-apic\_\-version@{io\_\-apic\_\-version}!mp.h@{mp.h}}
+\subsubsection[{io\_\-apic\_\-version}]{\setlength{\rightskip}{0pt plus 5cm}uint8 {\bf io\_\-apic\_\-version}}}
+\label{mp_8h_adcb9e020b08a2a061419d8949f79c19a}
+I/O APIC version, probably won't be used \hypertarget{mp_8h_a22a754e837a69515de66af1d0911ad2a}{
+\index{mp.h@{mp.h}!length@{length}}
+\index{length@{length}!mp.h@{mp.h}}
+\subsubsection[{length}]{\setlength{\rightskip}{0pt plus 5cm}uint8 {\bf length}}}
+\label{mp_8h_a22a754e837a69515de66af1d0911ad2a}
+(length of mp\_\-floating\_\-pointer in bytes)/16 \hypertarget{mp_8h_a9f949be4a2a9f89a1c78aa2e6e9b1a47}{
+\index{mp.h@{mp.h}!local\_\-apic@{local\_\-apic}}
+\index{local\_\-apic@{local\_\-apic}!mp.h@{mp.h}}
+\subsubsection[{local\_\-apic}]{\setlength{\rightskip}{0pt plus 5cm}uint32 {\bf local\_\-apic}}}
+\label{mp_8h_a9f949be4a2a9f89a1c78aa2e6e9b1a47}
+base address of local APIC \hypertarget{mp_8h_a4a695c3c979360a8ddd93ce0fb12fc10}{
+\index{mp.h@{mp.h}!local\_\-apic\_\-version@{local\_\-apic\_\-version}}
+\index{local\_\-apic\_\-version@{local\_\-apic\_\-version}!mp.h@{mp.h}}
+\subsubsection[{local\_\-apic\_\-version}]{\setlength{\rightskip}{0pt plus 5cm}uint8 {\bf local\_\-apic\_\-version}}}
+\label{mp_8h_a4a695c3c979360a8ddd93ce0fb12fc10}
+version of local APIC \hypertarget{mp_8h_a7ee25b903467227c0e475b0db0feeaf2}{
+\index{mp.h@{mp.h}!mp\_\-features@{mp\_\-features}}
+\index{mp\_\-features@{mp\_\-features}!mp.h@{mp.h}}
+\subsubsection[{mp\_\-features}]{\setlength{\rightskip}{0pt plus 5cm}uint8 {\bf mp\_\-features}\mbox{[}5\mbox{]}}}
+\label{mp_8h_a7ee25b903467227c0e475b0db0feeaf2}
+table of features \hypertarget{mp_8h_afa1c4502d42fa063991fdfac48ecfafc}{
+\index{mp.h@{mp.h}!mp\_\-version@{mp\_\-version}}
+\index{mp\_\-version@{mp\_\-version}!mp.h@{mp.h}}
+\subsubsection[{mp\_\-version}]{\setlength{\rightskip}{0pt plus 5cm}uint8 {\bf mp\_\-version}}}
+\label{mp_8h_afa1c4502d42fa063991fdfac48ecfafc}
+MultiProcessor specification version \hypertarget{mp_8h_a61737a3ceb5989198484abfae1f9674a}{
+\index{mp.h@{mp.h}!oem\_\-id@{oem\_\-id}}
+\index{oem\_\-id@{oem\_\-id}!mp.h@{mp.h}}
+\subsubsection[{oem\_\-id}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf oem\_\-id}\mbox{[}8\mbox{]}}}
+\label{mp_8h_a61737a3ceb5989198484abfae1f9674a}
+manufacturer ID \hypertarget{mp_8h_aaf31e8c570c2f58c50dc83e8235f1aac}{
+\index{mp.h@{mp.h}!oem\_\-table@{oem\_\-table}}
+\index{oem\_\-table@{oem\_\-table}!mp.h@{mp.h}}
+\subsubsection[{oem\_\-table}]{\setlength{\rightskip}{0pt plus 5cm}uint32 {\bf oem\_\-table}}}
+\label{mp_8h_aaf31e8c570c2f58c50dc83e8235f1aac}
+physical address of OEM table \hypertarget{mp_8h_a2e0b110950b6e249db2c4801369123cb}{
+\index{mp.h@{mp.h}!physical\_\-address@{physical\_\-address}}
+\index{physical\_\-address@{physical\_\-address}!mp.h@{mp.h}}
+\subsubsection[{physical\_\-address}]{\setlength{\rightskip}{0pt plus 5cm}uint32 {\bf physical\_\-address}}}
+\label{mp_8h_a2e0b110950b6e249db2c4801369123cb}
+Physical address of configuration table. Please note, that when paging is enabled, you have to convert it to virtual address! \hypertarget{mp_8h_a17f1c30301b57635f184d4fb04bd12e3}{
+\index{mp.h@{mp.h}!product\_\-id@{product\_\-id}}
+\index{product\_\-id@{product\_\-id}!mp.h@{mp.h}}
+\subsubsection[{product\_\-id}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf product\_\-id}\mbox{[}12\mbox{]}}}
+\label{mp_8h_a17f1c30301b57635f184d4fb04bd12e3}
+product family ID \hypertarget{mp_8h_ab3fd3e5f7bb36e0b63ec3576b73b18cb}{
+\index{mp.h@{mp.h}!reserved@{reserved}}
+\index{reserved@{reserved}!mp.h@{mp.h}}
+\subsubsection[{reserved}]{\setlength{\rightskip}{0pt plus 5cm}uint32 {\bf reserved}}}
+\label{mp_8h_ab3fd3e5f7bb36e0b63ec3576b73b18cb}
+\char`\"{}Get out of here, it's my place!\char`\"{} -\/ said The Great Imperor Intel.
+
+\char`\"{}Yes, my master\char`\"{} -\/ answered programmers, and from that day nobody used reserved bytes.
+
+is there a real need to describe these? \hypertarget{mp_8h_a6035aaa282f9d41e09816b80316e853a}{
+\index{mp.h@{mp.h}!signature@{signature}}
+\index{signature@{signature}!mp.h@{mp.h}}
+\subsubsection[{signature}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf signature}}}
+\label{mp_8h_a6035aaa282f9d41e09816b80316e853a}
+signature, should always be \char`\"{}\_\-MP\_\-\char`\"{}
+
+signature, should always be \char`\"{}PCMP\char`\"{} 

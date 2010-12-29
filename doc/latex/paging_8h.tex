@@ -1,0 +1,128 @@
+\hypertarget{paging_8h}{
+\section{kernel/mem/paging.h File Reference}
+\label{paging_8h}\index{kernel/mem/paging.h@{kernel/mem/paging.h}}
+}
+
+
+Paging functions.  
+
+
+{\ttfamily \#include \char`\"{}types.h\char`\"{}}\par
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{paging_8h_a122dfc414a40e260fd35dbe9743db26f}{
+\#define {\bfseries PAGE\_\-PRESENT}~1}
+\label{paging_8h_a122dfc414a40e260fd35dbe9743db26f}
+
+\item 
+\hypertarget{paging_8h_a42fcee19fa47dbf8252f593d0c565c67}{
+\#define {\bfseries PAGE\_\-READWRITE}~(1 $<$$<$ 1)}
+\label{paging_8h_a42fcee19fa47dbf8252f593d0c565c67}
+
+\item 
+\hypertarget{paging_8h_a18b0db0efe8ab14630d5e2d252847df4}{
+\#define {\bfseries PAGE\_\-READONLY}~0}
+\label{paging_8h_a18b0db0efe8ab14630d5e2d252847df4}
+
+\item 
+\hypertarget{paging_8h_a1072abc300a80922ba9b1d74da55d499}{
+\#define {\bfseries PAGE\_\-ACCESS\_\-USER}~(1 $<$$<$ 2)}
+\label{paging_8h_a1072abc300a80922ba9b1d74da55d499}
+
+\item 
+\hypertarget{paging_8h_a7dee58eab38acbdd7b4003e8bd1331a3}{
+\#define {\bfseries PAGE\_\-ACCESS\_\-SUPERVISOR}~0}
+\label{paging_8h_a7dee58eab38acbdd7b4003e8bd1331a3}
+
+\item 
+\hypertarget{paging_8h_a56696016bca4fc31f61555b27f77230a}{
+\#define {\bfseries PAGE\_\-WRITETHROUGH}~(1 $<$$<$ 3)}
+\label{paging_8h_a56696016bca4fc31f61555b27f77230a}
+
+\item 
+\hypertarget{paging_8h_ae7055279e9fa4b3b1266a8798d8cd311}{
+\#define {\bfseries PAGE\_\-WRITEBACK}~0}
+\label{paging_8h_ae7055279e9fa4b3b1266a8798d8cd311}
+
+\item 
+\hypertarget{paging_8h_a5697799d4451130ba464db24d3c1e6d1}{
+\#define {\bfseries PAGE\_\-CACHE\_\-DISABLE}~(1 $<$$<$ 4)}
+\label{paging_8h_a5697799d4451130ba464db24d3c1e6d1}
+
+\item 
+\hypertarget{paging_8h_ae220eb332935b48c04e88daa21cef1c4}{
+\#define {\bfseries PAGE\_\-CACHE\_\-ENABLED}~0}
+\label{paging_8h_ae220eb332935b48c04e88daa21cef1c4}
+
+\item 
+\hypertarget{paging_8h_add0f255a15cf72f5b47251d19092c41d}{
+\#define {\bfseries PAGE\_\-ACCESSED}~(1 $<$$<$ 5)}
+\label{paging_8h_add0f255a15cf72f5b47251d19092c41d}
+
+\item 
+\hypertarget{paging_8h_aad1444967f68c6071685200454b114c3}{
+\#define {\bfseries PAGE\_\-SIZE\_\-4KB}~0}
+\label{paging_8h_aad1444967f68c6071685200454b114c3}
+
+\item 
+\hypertarget{paging_8h_ae6124b36d732a0021a0355eeb410aef2}{
+\#define {\bfseries PAGE\_\-SIZE\_\-4MB}~(1 $<$$<$ 7)}
+\label{paging_8h_ae6124b36d732a0021a0355eeb410aef2}
+
+\item 
+\hypertarget{paging_8h_a38f76ac97f3269b62c98781d57732f84}{
+\#define {\bfseries PAGE\_\-ADDR}(addr)~((addr) $<$$<$ 12)}
+\label{paging_8h_a38f76ac97f3269b62c98781d57732f84}
+
+\item 
+\#define {\bfseries PAGE\_\-DEFAULT\_\-MASK}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{paging_8h_ae04de66de2293597d088ae454babaa34}{
+void {\bfseries paging\_\-create\_\-empty\_\-directory} (uint32 $\ast$dir)}
+\label{paging_8h_ae04de66de2293597d088ae454babaa34}
+
+\item 
+\hypertarget{paging_8h_aa51fc8ca892f396ef9bf4b77d6445e11}{
+uint32 $\ast$ {\bfseries paging\_\-create\_\-page\_\-table} (uint32 bitmask, uint32 startaddr)}
+\label{paging_8h_aa51fc8ca892f396ef9bf4b77d6445e11}
+
+\item 
+\hypertarget{paging_8h_a569adfd13ea3c63741f64108821b1712}{
+void {\bfseries paging\_\-init} ()}
+\label{paging_8h_a569adfd13ea3c63741f64108821b1712}
+
+\item 
+\hypertarget{paging_8h_ac065acf2d04dcc99c1a04faee75f1d43}{
+void {\bfseries paging\_\-switch\_\-directory} (uint32 $\ast$dir)}
+\label{paging_8h_ac065acf2d04dcc99c1a04faee75f1d43}
+
+\item 
+\hypertarget{paging_8h_ad6d520f99ef8596febe3285e50e79880}{
+void {\bfseries paging\_\-enable} ()}
+\label{paging_8h_ad6d520f99ef8596febe3285e50e79880}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Paging functions. \begin{DoxyAuthor}{Author}
+Maciej Małecki \hyperlink{paging_8h}{paging.h} defines functions and types used by kernel to manage paging, which is default way of memory management in this OS. 
+\end{DoxyAuthor}
+
+
+\subsection{Define Documentation}
+\hypertarget{paging_8h_ab63ef2f7a16dbb5cabcf84919b21be88}{
+\index{paging.h@{paging.h}!PAGE\_\-DEFAULT\_\-MASK@{PAGE\_\-DEFAULT\_\-MASK}}
+\index{PAGE\_\-DEFAULT\_\-MASK@{PAGE\_\-DEFAULT\_\-MASK}!paging.h@{paging.h}}
+\subsubsection[{PAGE\_\-DEFAULT\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define PAGE\_\-DEFAULT\_\-MASK}}
+\label{paging_8h_ab63ef2f7a16dbb5cabcf84919b21be88}
+{\bfseries Value:}
+\begin{DoxyCode}
+PAGE_READWRITE | PAGE_ACCESS_USER | PAGE_WRITEBACK \
+                               | PAGE_CACHE_ENABLED | PAGE_PRESENT | PAGE_SIZE_4K
+      B
+\end{DoxyCode}

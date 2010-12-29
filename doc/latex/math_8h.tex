@@ -1,0 +1,126 @@
+\hypertarget{math_8h}{
+\section{libc/math.h File Reference}
+\label{math_8h}\index{libc/math.h@{libc/math.h}}
+}
+
+
+Math functions.  
+
+
+{\ttfamily \#include \char`\"{}types.h\char`\"{}}\par
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{math_8h_a242a5105fc8920c73df0e1d00a2625a5}{is\_\-pow2} (uint x)
+\begin{DoxyCompactList}\small\item\em Checks if x is a power of 2. \item\end{DoxyCompactList}\item 
+double \hyperlink{math_8h_a4638b2137f40ea9dc8921117a1568d76}{pow\_\-di} (double base, int exponent)
+\begin{DoxyCompactList}\small\item\em Raises base to exponent. \item\end{DoxyCompactList}\item 
+\hypertarget{math_8h_a7cee022c416636a0d142433d14fdd60f}{
+long double {\bfseries pow\_\-ldi} (long double base, int exponent)}
+\label{math_8h_a7cee022c416636a0d142433d14fdd60f}
+
+\item 
+\hypertarget{math_8h_ac56622adb3916b34acafb40d00666627}{
+double {\bfseries pow\_\-ii} (int base, int exponent)}
+\label{math_8h_ac56622adb3916b34acafb40d00666627}
+
+\item 
+\hypertarget{math_8h_abbb79952818079fe5169e6a6e2471c6a}{
+int {\bfseries pow\_\-iui} (int base, uint exponent)}
+\label{math_8h_abbb79952818079fe5169e6a6e2471c6a}
+
+\item 
+\hypertarget{math_8h_a27382c762927551c5849a43cbd0d0e71}{
+double {\bfseries pow} (double base, double exponent)}
+\label{math_8h_a27382c762927551c5849a43cbd0d0e71}
+
+\item 
+\hypertarget{math_8h_ae09128febbbe6372cde4fa0c65608a42}{
+double {\bfseries exp} (double x)}
+\label{math_8h_ae09128febbbe6372cde4fa0c65608a42}
+
+\item 
+\hypertarget{math_8h_adb302c9aafbaa5e180d9f60ee954bb82}{
+double {\bfseries log} (double x)}
+\label{math_8h_adb302c9aafbaa5e180d9f60ee954bb82}
+
+\item 
+\hypertarget{math_8h_a8fb5c0b9b43a108724b355136d29d2f9}{
+double {\bfseries fabs} (double x)}
+\label{math_8h_a8fb5c0b9b43a108724b355136d29d2f9}
+
+\item 
+\hypertarget{math_8h_a1ea6d7b591132268abc2e843ababd084}{
+double {\bfseries ceil} (double x)}
+\label{math_8h_a1ea6d7b591132268abc2e843ababd084}
+
+\item 
+\hypertarget{math_8h_a6de60a3e907dcf0bfe3ea8d64f1e8873}{
+double {\bfseries floor} (double x)}
+\label{math_8h_a6de60a3e907dcf0bfe3ea8d64f1e8873}
+
+\item 
+\hypertarget{math_8h_a2e03fdeacdab3353f93d72f38dd14656}{
+int {\bfseries trunc} (float x)}
+\label{math_8h_a2e03fdeacdab3353f93d72f38dd14656}
+
+\item 
+\hypertarget{math_8h_a7df19cf730447c00150569250a4b5e1d}{
+double {\bfseries round} (double x)}
+\label{math_8h_a7df19cf730447c00150569250a4b5e1d}
+
+\item 
+\hypertarget{math_8h_a5936ef27aa03815e9c17d557e87a33d7}{
+long int {\bfseries lround} (double x)}
+\label{math_8h_a5936ef27aa03815e9c17d557e87a33d7}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Math functions. \hyperlink{math_8h}{math.h} defines standard mathematical functions that are used by kernel. 
+
+\subsection{Function Documentation}
+\hypertarget{math_8h_a242a5105fc8920c73df0e1d00a2625a5}{
+\index{math.h@{math.h}!is\_\-pow2@{is\_\-pow2}}
+\index{is\_\-pow2@{is\_\-pow2}!math.h@{math.h}}
+\subsubsection[{is\_\-pow2}]{\setlength{\rightskip}{0pt plus 5cm}int is\_\-pow2 (
+\begin{DoxyParamCaption}
+\item[{uint}]{ x}
+\end{DoxyParamCaption}
+)}}
+\label{math_8h_a242a5105fc8920c73df0e1d00a2625a5}
+
+
+Checks if x is a power of 2. 
+
+is\_\-pow2 checks if x is a power of two performing ASM instructions bsf and bsr, which return index of first and last high bit.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em x}]unsigned integer to check \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0, if x isn't a power of 2, log2(x) if it it 
+\end{DoxyReturn}
+\hypertarget{math_8h_a4638b2137f40ea9dc8921117a1568d76}{
+\index{math.h@{math.h}!pow\_\-di@{pow\_\-di}}
+\index{pow\_\-di@{pow\_\-di}!math.h@{math.h}}
+\subsubsection[{pow\_\-di}]{\setlength{\rightskip}{0pt plus 5cm}double pow\_\-di (
+\begin{DoxyParamCaption}
+\item[{double}]{ base, }
+\item[{int}]{ exponent}
+\end{DoxyParamCaption}
+)}}
+\label{math_8h_a4638b2137f40ea9dc8921117a1568d76}
+
+
+Raises base to exponent. 
+
+pow\_\-di raises double base to integer exponent, using iteration by squaring method.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em base}]base of power \item[{\em exponent}]exponent of power \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+base$^\wedge$exponent 
+\end{DoxyReturn}

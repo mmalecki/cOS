@@ -1,0 +1,74 @@
+\hypertarget{structmp__processor__entry}{
+\section{mp\_\-processor\_\-entry Struct Reference}
+\label{structmp__processor__entry}\index{mp\_\-processor\_\-entry@{mp\_\-processor\_\-entry}}
+}
+
+
+Contains information about each processor in multiprocessor system.  
+
+
+
+
+{\ttfamily \#include $<$mp.h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint8 \hyperlink{structmp__processor__entry_a9bfed0bbe2ddc426309892a4ad178e62}{entry\_\-type}
+\item 
+\hypertarget{structmp__processor__entry_a915caa7ce43d59359ac3c538d8abc446}{
+uint8 {\bfseries local\_\-apic\_\-id}}
+\label{structmp__processor__entry_a915caa7ce43d59359ac3c538d8abc446}
+
+\item 
+uint8 \hyperlink{structmp__processor__entry_a3d219542868b41a3d6c7f45c2d410384}{local\_\-apic\_\-version}
+\item 
+uint8 \hyperlink{structmp__processor__entry_a3c0959d25eccf5ae21e3129d7a30d6b0}{cpu\_\-flags}
+\item 
+uint32 \hyperlink{structmp__processor__entry_adcc102b4f90141aa248c8f3a8db6b858}{cpu\_\-signature}
+\item 
+uint32 \hyperlink{structmp__processor__entry_a0fee8cc04e85fd4f0622cbbbc8a6832f}{features}
+\item 
+uint32 \hyperlink{structmp__processor__entry_ab08df8af478d26004574301447ded14d}{reserved} \mbox{[}2\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Contains information about each processor in multiprocessor system. \hyperlink{structmp__processor__entry}{mp\_\-processor\_\-entry} contains information about each processor in multiproc system, which we wouldn't be able to get using CPUID or classic (non-\/MultiProcessor-\/compliant methods). 
+
+\subsection{Field Documentation}
+\hypertarget{structmp__processor__entry_a3c0959d25eccf5ae21e3129d7a30d6b0}{
+\index{mp\_\-processor\_\-entry@{mp\_\-processor\_\-entry}!cpu\_\-flags@{cpu\_\-flags}}
+\index{cpu\_\-flags@{cpu\_\-flags}!mp_processor_entry@{mp\_\-processor\_\-entry}}
+\subsubsection[{cpu\_\-flags}]{\setlength{\rightskip}{0pt plus 5cm}uint8 {\bf mp\_\-processor\_\-entry::cpu\_\-flags}}}
+\label{structmp__processor__entry_a3c0959d25eccf5ae21e3129d7a30d6b0}
+describes each CPU (if is it usable and if is it a bootstrap processor) \hypertarget{structmp__processor__entry_adcc102b4f90141aa248c8f3a8db6b858}{
+\index{mp\_\-processor\_\-entry@{mp\_\-processor\_\-entry}!cpu\_\-signature@{cpu\_\-signature}}
+\index{cpu\_\-signature@{cpu\_\-signature}!mp_processor_entry@{mp\_\-processor\_\-entry}}
+\subsubsection[{cpu\_\-signature}]{\setlength{\rightskip}{0pt plus 5cm}uint32 {\bf mp\_\-processor\_\-entry::cpu\_\-signature}}}
+\label{structmp__processor__entry_adcc102b4f90141aa248c8f3a8db6b858}
+contains information about each CPU (stepping, model, family) \hypertarget{structmp__processor__entry_a9bfed0bbe2ddc426309892a4ad178e62}{
+\index{mp\_\-processor\_\-entry@{mp\_\-processor\_\-entry}!entry\_\-type@{entry\_\-type}}
+\index{entry\_\-type@{entry\_\-type}!mp_processor_entry@{mp\_\-processor\_\-entry}}
+\subsubsection[{entry\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}uint8 {\bf mp\_\-processor\_\-entry::entry\_\-type}}}
+\label{structmp__processor__entry_a9bfed0bbe2ddc426309892a4ad178e62}
+specifies entry type in config. table, in \hyperlink{structmp__processor__entry}{mp\_\-processor\_\-entry} should always be 0 \hypertarget{structmp__processor__entry_a0fee8cc04e85fd4f0622cbbbc8a6832f}{
+\index{mp\_\-processor\_\-entry@{mp\_\-processor\_\-entry}!features@{features}}
+\index{features@{features}!mp_processor_entry@{mp\_\-processor\_\-entry}}
+\subsubsection[{features}]{\setlength{\rightskip}{0pt plus 5cm}uint32 {\bf mp\_\-processor\_\-entry::features}}}
+\label{structmp__processor__entry_a0fee8cc04e85fd4f0622cbbbc8a6832f}
+describes CPU features \hypertarget{structmp__processor__entry_a3d219542868b41a3d6c7f45c2d410384}{
+\index{mp\_\-processor\_\-entry@{mp\_\-processor\_\-entry}!local\_\-apic\_\-version@{local\_\-apic\_\-version}}
+\index{local\_\-apic\_\-version@{local\_\-apic\_\-version}!mp_processor_entry@{mp\_\-processor\_\-entry}}
+\subsubsection[{local\_\-apic\_\-version}]{\setlength{\rightskip}{0pt plus 5cm}uint8 {\bf mp\_\-processor\_\-entry::local\_\-apic\_\-version}}}
+\label{structmp__processor__entry_a3d219542868b41a3d6c7f45c2d410384}
+version of local APIC \hypertarget{structmp__processor__entry_ab08df8af478d26004574301447ded14d}{
+\index{mp\_\-processor\_\-entry@{mp\_\-processor\_\-entry}!reserved@{reserved}}
+\index{reserved@{reserved}!mp_processor_entry@{mp\_\-processor\_\-entry}}
+\subsubsection[{reserved}]{\setlength{\rightskip}{0pt plus 5cm}uint32 {\bf mp\_\-processor\_\-entry::reserved}\mbox{[}2\mbox{]}}}
+\label{structmp__processor__entry_ab08df8af478d26004574301447ded14d}
+is there a real need to describe these? 
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+kernel/mp/\hyperlink{mp_8h}{mp.h}\end{DoxyCompactItemize}

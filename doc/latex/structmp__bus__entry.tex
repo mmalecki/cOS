@@ -1,0 +1,48 @@
+\hypertarget{structmp__bus__entry}{
+\section{mp\_\-bus\_\-entry Struct Reference}
+\label{structmp__bus__entry}\index{mp\_\-bus\_\-entry@{mp\_\-bus\_\-entry}}
+}
+
+
+Contains information about each bus installed in system.  
+
+
+
+
+{\ttfamily \#include $<$mp.h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint8 \hyperlink{structmp__bus__entry_a8140c8c7b07812414d86746af40e9043}{entry\_\-type}
+\item 
+uint8 \hyperlink{structmp__bus__entry_abd8e48c419740a7c8dc96f0e34bad2fc}{bus\_\-id}
+\item 
+char \hyperlink{structmp__bus__entry_a302b64734336c1fb7bd4376a032f9358}{bus\_\-type} \mbox{[}6\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Contains information about each bus installed in system. \hyperlink{structmp__bus__entry}{mp\_\-bus\_\-entry} contains information about each bus in system, describing it's type and ID. 
+
+\subsection{Field Documentation}
+\hypertarget{structmp__bus__entry_abd8e48c419740a7c8dc96f0e34bad2fc}{
+\index{mp\_\-bus\_\-entry@{mp\_\-bus\_\-entry}!bus\_\-id@{bus\_\-id}}
+\index{bus\_\-id@{bus\_\-id}!mp_bus_entry@{mp\_\-bus\_\-entry}}
+\subsubsection[{bus\_\-id}]{\setlength{\rightskip}{0pt plus 5cm}uint8 {\bf mp\_\-bus\_\-entry::bus\_\-id}}}
+\label{structmp__bus__entry_abd8e48c419740a7c8dc96f0e34bad2fc}
+unique bus id \hypertarget{structmp__bus__entry_a302b64734336c1fb7bd4376a032f9358}{
+\index{mp\_\-bus\_\-entry@{mp\_\-bus\_\-entry}!bus\_\-type@{bus\_\-type}}
+\index{bus\_\-type@{bus\_\-type}!mp_bus_entry@{mp\_\-bus\_\-entry}}
+\subsubsection[{bus\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf mp\_\-bus\_\-entry::bus\_\-type}\mbox{[}6\mbox{]}}}
+\label{structmp__bus__entry_a302b64734336c1fb7bd4376a032f9358}
+bus type in string form, blank-\/filled \hypertarget{structmp__bus__entry_a8140c8c7b07812414d86746af40e9043}{
+\index{mp\_\-bus\_\-entry@{mp\_\-bus\_\-entry}!entry\_\-type@{entry\_\-type}}
+\index{entry\_\-type@{entry\_\-type}!mp_bus_entry@{mp\_\-bus\_\-entry}}
+\subsubsection[{entry\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}uint8 {\bf mp\_\-bus\_\-entry::entry\_\-type}}}
+\label{structmp__bus__entry_a8140c8c7b07812414d86746af40e9043}
+specifies entry type in config. table, in \hyperlink{structmp__bus__entry}{mp\_\-bus\_\-entry} should always be 1 
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+kernel/mp/\hyperlink{mp_8h}{mp.h}\end{DoxyCompactItemize}
