@@ -7,12 +7,12 @@
 # (so the output format is ELF).
 #
 # In fact, I use sometimes Windows as my working machine, but build is then
-# performed on Linux (Fedora 13) machine, using built-in (?) NetBeans feature
-# that allows you to choose developement host from network (it will work even over
+# performed on Linux machine, using built-in (?) NetBeans feature that allows
+# you to choose developement host from network (it will work even over
 # Internet, but that would be a bit uncomfortable, since it compiles source code,
 # but does not copy build objects back to working machine).
 # All you need to perform remote build is working net connection and SSH server
-# (so xinetd is needed) on build machine.
+# on build machine.
 #
 # There are no problems under any Linux with even most basic build tools.
 
@@ -20,7 +20,7 @@ BIN         = ../bin/cOS
 INCS        = -I"libc" -I"common" -I"."
 DEFINES     = -DWITH_SSE -DWITH_SSE2 -DWITH_APIC #-DWITH_PAE
 CFLAGS      = $(INCS) $(DEFINES) -Wall -Wextra -nostdlib -nostartfiles \
-              -nodefaultlibs -ffreestanding -m32 -O1
+              -nodefaultlibs -ffreestanding -m32 -O2
 OBJP        = ../obj/
 LDFLAGS     = -m elf_i386 -Tlinker.ld
 NASMFLAGS   = -f elf

@@ -1,4 +1,7 @@
 #include <string.h>
+#include "hardware/cpu/cpu.h"
+
+extern uint32 cpu_ext_mask;
 
 size_t strlen(const char* str) {
   int i;
@@ -50,11 +53,55 @@ void* memchr(const void* ptr, int value, size_t num) {
   return NULL;
 }
 
-void* memcpy(void* destination, const void* source, size_t num) {
-  const char* src = source;
-  char* dest = destination;
-  while (num-- != 0)
-    *(dest + num) = *(src + num);
+void* memcpy(void* destination, const void* src, size_t sz) {
+  void* dest = destination;
+  #ifdef WITH_SSE2
+  if (CPU_EXT(SSE2)) {
+    // SSE way, freaking fast
+    register char r = 0x10 - (((long unsigned int) dest) & 0xF);
+    if (r != 0x10) {
+      asm(
+        "rep movsb \n\t"
+        : : "c" (r), "S" (src), "D" (dest) :);
+      dest += r;
+      src += r;
+      sz -= r;
+    }
+    for (; sz >= 128; sz -= 128) {
+      asm(
+        "movdqa 0(%0),   %%xmm0  \n\t"
+        "movdqa 16(%0),  %%xmm1  \n\t"
+        "movdqa 32(%0),  %%xmm2  \n\t"
+        "movdqa 48(%0),  %%xmm3  \n\t"
+        "movdqa 64(%0),  %%xmm4  \n\t"
+        "movdqa 80(%0),  %%xmm5  \n\t"
+        "movdqa 96(%0),  %%xmm6  \n\t"
+        "movdqa 112(%0), %%xmm7  \n\t"
+        "movdqa %%xmm0,  0(%1)   \n\t"
+        "movdqa %%xmm1,  16(%1)  \n\t"
+        "movdqa %%xmm2,  32(%1)  \n\t"
+        "movdqa %%xmm3,  48(%1)  \n\t"
+        "movdqa %%xmm4,  64(%1)  \n\t"
+        "movdqa %%xmm5,  80(%1)  \n\t"
+        "movdqa %%xmm6,  96(%1)  \n\t"
+        "movdqa %%xmm7,  112(%1) \n\t"
+      : : "S" (src), "D" (dest) :);
+      src += 128;
+      dest += 128;
+    }
+    if (sz > 0)
+      --sz;
+    asm(
+      "rep movsb \n\t"
+      : : "c" (sz), "S" (src), "D" (dest) :);
+  }
+  else {
+  #endif
+    // non-SSE way
+    asm("rep movsb \n\t" : : "c" (sz), "S" (src), "D" (dest) :);
+  #ifdef WITH_SSE
+  }
+  #endif
   return destination;
 }
 

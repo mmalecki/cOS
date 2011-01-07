@@ -108,7 +108,6 @@ void isr_handler(registers_t registers) {
   char buf[64];
   sprintf(buf, "An interrupt #%i raised.\n", registers.int_no);
   screen_puts(buf);
-  asm("hlt");
   if (int_handlers[registers.int_no] != NULL)
     int_handlers[registers.int_no](registers);
 }

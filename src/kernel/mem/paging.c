@@ -9,8 +9,14 @@
 #include "kernel/screen.h"
 #include "hardware/cpu/cpu.h"
 
+/* Maciej Małecki <maciej.malecki@hotmail.com>
+ * Total rewrite done. Added layer of abstraction.
+ */
+
 uint32* current_directory;
 uint32 kernel_directory[1024] __attribute__ ((aligned (4096)));
+
+uint32 paging_state = 0;
 
 
 #ifdef WITH_PAE
@@ -24,6 +30,31 @@ void paging_pae_enable();
 uint64* paging_pae_create_directory_ptr();
 uint64* paging_pae_create_directory(uint64 start_addr, uint32 bitmask, uint32 pt_bitmask);
 uint64* paging_pae_create_page_table(uint64 start_addr, uint32 bitmask);
+
+void paging_map(void* dir, uint64 phys, uint64 virt, uint64 size, uint8 opt) {
+  if (paging_state & PAGING_PAE) 
+    paging_map_pae(dir, phys, virt, size, opt);
+  else if (paging_state & PAGING_4MB)
+    paging_map_4mb(dir, phys, virt, size, opt);
+  else
+    paging_map_legacy(dir, phys, virt, size, opt);
+}
+
+void paging_map_pae(void* dir, uint64 phys, uint64 virt, uint64 size, uint8 opt) {
+  
+}
+
+void paging_map_4mb(void* dir, uint64 phys, uint64 virt, uint64 size, uint8 opt) {
+  
+}
+
+void paging_map_legacy(void* dir, uint64 phys, uint64 virt, uint64 size, uint8 opt) {
+  uint32 dir = virt >> 22;
+  virt -= dir << 22;
+  uint32 table = virt >> 12;
+  virt -= table << 12;
+  uint32 page = virt >> 10;
+}
 
 void paging_create_directory(uint32* dir) {
   dir = _pmalloc(sizeof(uint32) * 1024, 0x1000, NULL);

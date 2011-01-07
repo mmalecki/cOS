@@ -1,19 +1,21 @@
 ENTRY(_loader)
 OUTPUT_FORMAT(elf32-i386)
 
-SECTIONS {
-  . = 0xC0100000;
+KERNEL_VIRTUAL_BASE = 0xC0000000;
 
-  .text : AT(ADDR(.text) - 0xC0000000) {
+SECTIONS {
+  . = KERNEL_VIRTUAL_BASE + 0x100000;
+
+  .text : AT(ADDR(.text) - KERNEL_VIRTUAL_BASE) {
     *(.text)
     *(.rodata*)
   }
 
-  .data ALIGN(0x1000) : AT(ADDR(.data) - 0xC0000000) {
+  .data ALIGN(0x1000) : AT(ADDR(.data) - KERNEL_VIRTUAL_BASE) {
     *(.data)
   }
 
-  .bss : AT(ADDR(.bss) - 0xC0000000) {
+  .bss : AT(ADDR(.bss) - KERNEL_VIRTUAL_BASE) {
     _sbss = .;
     *(COMMON)
     *(.bss)

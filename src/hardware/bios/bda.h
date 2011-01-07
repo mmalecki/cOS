@@ -14,7 +14,7 @@ extern "C" {
 
 #include "types.h"
 
-#define BDA_ADDRESS      0x400
+#define BDA_ADDRESS      (0x400 + 0xC0000000)
 #define BDA_EBDA_ADDRESS BDA_ADDRESS + 0x0E
 #define BDA_MEM_SIZE     BDA_ADDRESS + 0x13
 

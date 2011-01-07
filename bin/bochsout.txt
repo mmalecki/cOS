@@ -29,52 +29,52 @@
 00000000000i[     ]   SB16 support: yes
 00000000000i[     ]   USB support: no
 00000000000i[     ]   VGA extension support: vbe cirrus
-00000000000i[MEM0 ] allocated memory at 0x7f2fde883010. after alignment, vector=0x7f2fde884000
+00000000000i[MEM0 ] allocated memory at 0x7f5108a98010. after alignment, vector=0x7f5108a99000
 00000000000i[MEM0 ] 256,00MB
 00000000000i[MEM0 ] mem block size = 0x00100000, blocks=256
 00000000000i[MEM0 ] rom at 0xfffe0000/131072 ('/usr/share/bochs/BIOS-bochs-latest')
 00000000000i[MEM0 ] rom at 0xc0000/40448 ('/usr/share/bochs/VGABIOS-lgpl-latest')
 00000000000i[VTIME] using 'realtime pit' synchronization method
-00000000000i[     ] lt_dlhandle is 0x284cc30
+00000000000i[     ] lt_dlhandle is 0x239ac30
 00000000000i[PLGIN] loaded plugin libbx_cmos.la
-00000000000i[     ] lt_dlhandle is 0x284ce30
+00000000000i[     ] lt_dlhandle is 0x239ae30
 00000000000i[PLGIN] loaded plugin libbx_dma.la
-00000000000i[     ] lt_dlhandle is 0x284d7f0
+00000000000i[     ] lt_dlhandle is 0x239b7f0
 00000000000i[PLGIN] loaded plugin libbx_pic.la
-00000000000i[     ] lt_dlhandle is 0x284e850
+00000000000i[     ] lt_dlhandle is 0x239c850
 00000000000i[PLGIN] loaded plugin libbx_pit.la
-00000000000i[     ] lt_dlhandle is 0x284eaf0
+00000000000i[     ] lt_dlhandle is 0x239caf0
 00000000000i[PLGIN] loaded plugin libbx_vga.la
-00000000000i[     ] lt_dlhandle is 0x284fad0
+00000000000i[     ] lt_dlhandle is 0x239dad0
 00000000000i[PLGIN] loaded plugin libbx_floppy.la
-00000000000i[     ] lt_dlhandle is 0x2850460
+00000000000i[     ] lt_dlhandle is 0x239e460
 00000000000i[PLGIN] loaded plugin libbx_pci.la
-00000000000i[     ] lt_dlhandle is 0x2850dc0
+00000000000i[     ] lt_dlhandle is 0x239edc0
 00000000000i[PLGIN] loaded plugin libbx_pci2isa.la
-00000000000i[     ] lt_dlhandle is 0x2850400
+00000000000i[     ] lt_dlhandle is 0x239e400
 00000000000i[PLGIN] loaded plugin libbx_unmapped.la
-00000000000i[     ] lt_dlhandle is 0x2851b80
+00000000000i[     ] lt_dlhandle is 0x239fb80
 00000000000i[PLGIN] loaded plugin libbx_biosdev.la
-00000000000i[     ] lt_dlhandle is 0x2852e70
+00000000000i[     ] lt_dlhandle is 0x23a0e70
 00000000000i[PLGIN] loaded plugin libbx_speaker.la
-00000000000i[     ] lt_dlhandle is 0x2853150
+00000000000i[     ] lt_dlhandle is 0x23a1150
 00000000000i[PLGIN] loaded plugin libbx_extfpuirq.la
-00000000000i[     ] lt_dlhandle is 0x2853f50
+00000000000i[     ] lt_dlhandle is 0x23a1f50
 00000000000i[PLGIN] loaded plugin libbx_gameport.la
-00000000000i[     ] lt_dlhandle is 0x2854990
+00000000000i[     ] lt_dlhandle is 0x23a2990
 00000000000i[PLGIN] loaded plugin libbx_pci_ide.la
-00000000000i[     ] lt_dlhandle is 0x2854b70
+00000000000i[     ] lt_dlhandle is 0x23a2b70
 00000000000i[PLGIN] loaded plugin libbx_ioapic.la
-00000000000i[     ] lt_dlhandle is 0x2855b20
+00000000000i[     ] lt_dlhandle is 0x23a3b20
 00000000000i[PLGIN] loaded plugin libbx_keyboard.la
-00000000000i[     ] lt_dlhandle is 0x2856660
+00000000000i[     ] lt_dlhandle is 0x23a4660
 00000000000i[PLGIN] loaded plugin libbx_harddrv.la
-00000000000i[     ] lt_dlhandle is 0x28686e0
+00000000000i[     ] lt_dlhandle is 0x23b66e0
 00000000000i[PLGIN] loaded plugin libbx_serial.la
-00000000000i[     ] lt_dlhandle is 0x28695e0
+00000000000i[     ] lt_dlhandle is 0x23b75e0
 00000000000i[PLGIN] loaded plugin libbx_parallel.la
 00000000000i[CMOS ] Using local time for initial clock
-00000000000i[CMOS ] Setting initial clock to: Wed Dec 29 14:37:20 2010 (time0=1293629840)
+00000000000i[CMOS ] Setting initial clock to: Wed Dec 29 19:19:06 2010 (time0=1293646746)
 00000000000i[DMA  ] channel 4 used by cascade
 00000000000i[DMA  ] channel 2 used by Floppy Drive
 00000000000i[FDD  ] fd0: 'floppy.img' ro=0, h=2,t=80,spt=18
@@ -174,82 +174,82 @@
 00001461164i[BIOS ] SMBIOS table addr=0x000fbd10
 00001461203i[PCI  ] 440FX PMC write to PAM register 59 (TLB Flush)
 00001461994i[BIOS ] bios_table_cur_addr: 0x000fbe1e
-00036285511i[BIOS ] Booting from 0000:7c00
-00037964092i[BIOS ] int13_harddisk: function 41, unmapped device for ELDL=80
-00037968868i[BIOS ] int13_harddisk: function 08, unmapped device for ELDL=80
-00037973518i[BIOS ] *** int 15h function AX=00c0, BX=0000 not yet supported!
-00043063254i[CPU0 ] math_abort: MSDOS compatibility FPU exception
-00043063255i[CPU0 ] math_abort: MSDOS compatibility FPU exception
-00043063256i[CPU0 ] math_abort: MSDOS compatibility FPU exception
-00043063793i[CPU0 ] math_abort: MSDOS compatibility FPU exception
-00043063794i[CPU0 ] math_abort: MSDOS compatibility FPU exception
-00043063800i[CPU0 ] math_abort: MSDOS compatibility FPU exception
-00043063801i[CPU0 ] math_abort: MSDOS compatibility FPU exception
-00043063805i[CPU0 ] math_abort: MSDOS compatibility FPU exception
-00043063806i[CPU0 ] math_abort: MSDOS compatibility FPU exception
-00043063807i[CPU0 ] math_abort: MSDOS compatibility FPU exception
-00043063808i[CPU0 ] math_abort: MSDOS compatibility FPU exception
-00043063822i[CPU0 ] math_abort: MSDOS compatibility FPU exception
-00043063826i[CPU0 ] math_abort: MSDOS compatibility FPU exception
-00043063832i[CPU0 ] math_abort: MSDOS compatibility FPU exception
-00043063838i[CPU0 ] math_abort: MSDOS compatibility FPU exception
-00043063844i[CPU0 ] math_abort: MSDOS compatibility FPU exception
-00043063850i[CPU0 ] math_abort: MSDOS compatibility FPU exception
-00043063856i[CPU0 ] math_abort: MSDOS compatibility FPU exception
-00043063862i[CPU0 ] math_abort: MSDOS compatibility FPU exception
-00043063868i[CPU0 ] math_abort: MSDOS compatibility FPU exception
-00043063874i[CPU0 ] math_abort: MSDOS compatibility FPU exception
-00043063880i[CPU0 ] math_abort: MSDOS compatibility FPU exception
-00043063886i[CPU0 ] math_abort: MSDOS compatibility FPU exception
-00043063892i[CPU0 ] math_abort: MSDOS compatibility FPU exception
-00043063898i[CPU0 ] math_abort: MSDOS compatibility FPU exception
-00043063904i[CPU0 ] math_abort: MSDOS compatibility FPU exception
-00043063910i[CPU0 ] math_abort: MSDOS compatibility FPU exception
-00043063916i[CPU0 ] math_abort: MSDOS compatibility FPU exception
-00043063922i[CPU0 ] math_abort: MSDOS compatibility FPU exception
-00043063928i[CPU0 ] math_abort: MSDOS compatibility FPU exception
-00043063934i[CPU0 ] math_abort: MSDOS compatibility FPU exception
-00043063940i[CPU0 ] math_abort: MSDOS compatibility FPU exception
-00043063946i[CPU0 ] math_abort: MSDOS compatibility FPU exception
-00043063952i[CPU0 ] math_abort: MSDOS compatibility FPU exception
-00043063958i[CPU0 ] math_abort: MSDOS compatibility FPU exception
-00043063964i[CPU0 ] math_abort: MSDOS compatibility FPU exception
-00043063970i[CPU0 ] math_abort: MSDOS compatibility FPU exception
-00043063976i[CPU0 ] math_abort: MSDOS compatibility FPU exception
-00043063982i[CPU0 ] math_abort: MSDOS compatibility FPU exception
-00043063988i[CPU0 ] math_abort: MSDOS compatibility FPU exception
-00043063994i[CPU0 ] math_abort: MSDOS compatibility FPU exception
-00043064000i[CPU0 ] math_abort: MSDOS compatibility FPU exception
-00043064006i[CPU0 ] math_abort: MSDOS compatibility FPU exception
-00043064007i[CPU0 ] math_abort: MSDOS compatibility FPU exception
-00043064008i[CPU0 ] math_abort: MSDOS compatibility FPU exception
-00043064015i[CPU0 ] math_abort: MSDOS compatibility FPU exception
-00043064016i[CPU0 ] math_abort: MSDOS compatibility FPU exception
-00043064017i[CPU0 ] math_abort: MSDOS compatibility FPU exception
-00043064028i[CPU0 ] math_abort: MSDOS compatibility FPU exception
-00043064029i[CPU0 ] math_abort: MSDOS compatibility FPU exception
-00043064030i[CPU0 ] math_abort: MSDOS compatibility FPU exception
-00045465806i[CPU0 ] WARNING: HLT instruction with IF=0!
-00090325000p[XGUI ] >>PANIC<< POWER button turned off.
-00090325000i[CPU0 ] CPU is in protected mode (halted)
-00090325000i[CPU0 ] CS.d_b = 32 bit
-00090325000i[CPU0 ] SS.d_b = 32 bit
-00090325000i[CPU0 ] | EAX=00000000  EBX=c010cd6c  ECX=00000000  EDX=c00b8dc0
-00090325000i[CPU0 ] | ESP=c010cd2c  EBP=c010cdb4  ESI=0000000e  EDI=c0103355
-00090325000i[CPU0 ] | IOPL=0 id vip vif ac vm rf nt of df if tf SF zf af PF cf
-00090325000i[CPU0 ] | SEG selector     base    limit G D
-00090325000i[CPU0 ] | SEG sltr(index|ti|rpl)     base    limit G D
-00090325000i[CPU0 ] |  CS:0008( 0001| 0|  0) 00000000 ffffffff 1 1
-00090325000i[CPU0 ] |  DS:0010( 0002| 0|  0) 00000000 ffffffff 1 1
-00090325000i[CPU0 ] |  SS:0010( 0002| 0|  0) 00000000 ffffffff 1 1
-00090325000i[CPU0 ] |  ES:0010( 0002| 0|  0) 00000000 ffffffff 1 1
-00090325000i[CPU0 ] |  FS:0010( 0002| 0|  0) 00000000 ffffffff 1 1
-00090325000i[CPU0 ] |  GS:0010( 0002| 0|  0) 00000000 ffffffff 1 1
-00090325000i[CPU0 ] | EIP=c0101b7f (c0101b7f)
-00090325000i[CPU0 ] | CR0=0xe0000011 CR2=0x6f696200
-00090325000i[CPU0 ] | CR3=0x00108000 CR4=0x00000010
-00090325000i[CPU0 ] 0xc0101b7f>> mov eax, dword ptr ds:[esi*4-1072668576] : 8B04B5606010C0
-00090325000i[CMOS ] Last time is 1293630020 (Wed Dec 29 14:40:20 2010)
-00090325000i[XGUI ] Exit
-00090325000i[     ] restoring default signal behavior
-00090325000i[CTRL ] quit_sim called with exit code 1
+00035196698i[BIOS ] Booting from 0000:7c00
+00036875234i[BIOS ] int13_harddisk: function 41, unmapped device for ELDL=80
+00036880010i[BIOS ] int13_harddisk: function 08, unmapped device for ELDL=80
+00036884660i[BIOS ] *** int 15h function AX=00c0, BX=0000 not yet supported!
+00041952731i[CPU0 ] math_abort: MSDOS compatibility FPU exception
+00041952732i[CPU0 ] math_abort: MSDOS compatibility FPU exception
+00041952733i[CPU0 ] math_abort: MSDOS compatibility FPU exception
+00041953270i[CPU0 ] math_abort: MSDOS compatibility FPU exception
+00041953271i[CPU0 ] math_abort: MSDOS compatibility FPU exception
+00041953277i[CPU0 ] math_abort: MSDOS compatibility FPU exception
+00041953278i[CPU0 ] math_abort: MSDOS compatibility FPU exception
+00041953282i[CPU0 ] math_abort: MSDOS compatibility FPU exception
+00041953283i[CPU0 ] math_abort: MSDOS compatibility FPU exception
+00041953284i[CPU0 ] math_abort: MSDOS compatibility FPU exception
+00041953285i[CPU0 ] math_abort: MSDOS compatibility FPU exception
+00041953299i[CPU0 ] math_abort: MSDOS compatibility FPU exception
+00041953303i[CPU0 ] math_abort: MSDOS compatibility FPU exception
+00041953309i[CPU0 ] math_abort: MSDOS compatibility FPU exception
+00041953315i[CPU0 ] math_abort: MSDOS compatibility FPU exception
+00041953321i[CPU0 ] math_abort: MSDOS compatibility FPU exception
+00041953327i[CPU0 ] math_abort: MSDOS compatibility FPU exception
+00041953333i[CPU0 ] math_abort: MSDOS compatibility FPU exception
+00041953339i[CPU0 ] math_abort: MSDOS compatibility FPU exception
+00041953345i[CPU0 ] math_abort: MSDOS compatibility FPU exception
+00041953351i[CPU0 ] math_abort: MSDOS compatibility FPU exception
+00041953357i[CPU0 ] math_abort: MSDOS compatibility FPU exception
+00041953363i[CPU0 ] math_abort: MSDOS compatibility FPU exception
+00041953369i[CPU0 ] math_abort: MSDOS compatibility FPU exception
+00041953375i[CPU0 ] math_abort: MSDOS compatibility FPU exception
+00041953381i[CPU0 ] math_abort: MSDOS compatibility FPU exception
+00041953387i[CPU0 ] math_abort: MSDOS compatibility FPU exception
+00041953393i[CPU0 ] math_abort: MSDOS compatibility FPU exception
+00041953399i[CPU0 ] math_abort: MSDOS compatibility FPU exception
+00041953405i[CPU0 ] math_abort: MSDOS compatibility FPU exception
+00041953411i[CPU0 ] math_abort: MSDOS compatibility FPU exception
+00041953417i[CPU0 ] math_abort: MSDOS compatibility FPU exception
+00041953423i[CPU0 ] math_abort: MSDOS compatibility FPU exception
+00041953429i[CPU0 ] math_abort: MSDOS compatibility FPU exception
+00041953435i[CPU0 ] math_abort: MSDOS compatibility FPU exception
+00041953441i[CPU0 ] math_abort: MSDOS compatibility FPU exception
+00041953447i[CPU0 ] math_abort: MSDOS compatibility FPU exception
+00041953453i[CPU0 ] math_abort: MSDOS compatibility FPU exception
+00041953459i[CPU0 ] math_abort: MSDOS compatibility FPU exception
+00041953465i[CPU0 ] math_abort: MSDOS compatibility FPU exception
+00041953471i[CPU0 ] math_abort: MSDOS compatibility FPU exception
+00041953477i[CPU0 ] math_abort: MSDOS compatibility FPU exception
+00041953483i[CPU0 ] math_abort: MSDOS compatibility FPU exception
+00041953484i[CPU0 ] math_abort: MSDOS compatibility FPU exception
+00041953485i[CPU0 ] math_abort: MSDOS compatibility FPU exception
+00041953492i[CPU0 ] math_abort: MSDOS compatibility FPU exception
+00041953493i[CPU0 ] math_abort: MSDOS compatibility FPU exception
+00041953494i[CPU0 ] math_abort: MSDOS compatibility FPU exception
+00041953505i[CPU0 ] math_abort: MSDOS compatibility FPU exception
+00041953506i[CPU0 ] math_abort: MSDOS compatibility FPU exception
+00041953507i[CPU0 ] math_abort: MSDOS compatibility FPU exception
+00044355283i[CPU0 ] WARNING: HLT instruction with IF=0!
+00048641000p[XGUI ] >>PANIC<< POWER button turned off.
+00048641000i[CPU0 ] CPU is in protected mode (halted)
+00048641000i[CPU0 ] CS.d_b = 32 bit
+00048641000i[CPU0 ] SS.d_b = 32 bit
+00048641000i[CPU0 ] | EAX=00000000  EBX=c010cd6c  ECX=00000000  EDX=c00b8dc0
+00048641000i[CPU0 ] | ESP=c010cd2c  EBP=c010cdb4  ESI=0000000e  EDI=c0103355
+00048641000i[CPU0 ] | IOPL=0 id vip vif ac vm rf nt of df if tf SF zf af PF cf
+00048641000i[CPU0 ] | SEG selector     base    limit G D
+00048641000i[CPU0 ] | SEG sltr(index|ti|rpl)     base    limit G D
+00048641000i[CPU0 ] |  CS:0008( 0001| 0|  0) 00000000 ffffffff 1 1
+00048641000i[CPU0 ] |  DS:0010( 0002| 0|  0) 00000000 ffffffff 1 1
+00048641000i[CPU0 ] |  SS:0010( 0002| 0|  0) 00000000 ffffffff 1 1
+00048641000i[CPU0 ] |  ES:0010( 0002| 0|  0) 00000000 ffffffff 1 1
+00048641000i[CPU0 ] |  FS:0010( 0002| 0|  0) 00000000 ffffffff 1 1
+00048641000i[CPU0 ] |  GS:0010( 0002| 0|  0) 00000000 ffffffff 1 1
+00048641000i[CPU0 ] | EIP=c0101b7f (c0101b7f)
+00048641000i[CPU0 ] | CR0=0xe0000011 CR2=0x6f696200
+00048641000i[CPU0 ] | CR3=0x00108000 CR4=0x00000010
+00048641000i[CPU0 ] 0xc0101b7f>> mov eax, dword ptr ds:[esi*4-1072668576] : 8B04B5606010C0
+00048641000i[CMOS ] Last time is 1293646843 (Wed Dec 29 19:20:43 2010)
+00048641000i[XGUI ] Exit
+00048641000i[     ] restoring default signal behavior
+00048641000i[CTRL ] quit_sim called with exit code 1

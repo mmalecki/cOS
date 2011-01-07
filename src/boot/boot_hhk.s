@@ -5,14 +5,14 @@ extern kcall                            ; kcall is defined elsewhere
 MODULEALIGN equ  1<<0             ; align loaded modules on page boundaries
 MEMINFO     equ  1<<1             ; provide memory map
 FLAGS       equ  MODULEALIGN | MEMINFO  ; this is the Multiboot 'flag' field
-MAGIC       equ    0x1BADB002     ; 'magic number' lets bootloader find the header
+MAGIC       equ  0x1BADB002     ; 'magic number' lets bootloader find the header
 CHECKSUM    equ -(MAGIC + FLAGS)  ; checksum required
 
 ; This is the virtual base address of kernel space. It must be used to convert virtual
 ; addresses into physical addresses until paging is enabled. Note that this is not
 ; the virtual address where the kernel image itself is loaded -- just the amount that must
 ; be subtracted from a virtual address to get a physical address.
-KERNEL_VIRTUAL_BASE equ 0xC0000000                  ; 3GB
+KERNEL_VIRTUAL_BASE equ 0xC0000000             ; 3GB
 KERNEL_PAGE_NUMBER equ (KERNEL_VIRTUAL_BASE >> 22)  ; Page directory index of kernel's 4MB PTE.
 KERNEL_PAGE_COUNT equ 2
 
