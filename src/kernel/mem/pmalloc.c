@@ -19,3 +19,7 @@ void* _pmalloc(size_t sz, int align, uint32* phys) {
 void* pmalloc(size_t sz) {
   return _pmalloc(sz, FALSE, NULL);
 }
+
+void pfree(size_t sz) {
+  address -= sz;
+}

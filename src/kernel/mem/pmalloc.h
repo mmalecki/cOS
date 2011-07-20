@@ -14,6 +14,7 @@ extern "C" {
 
 void* _pmalloc(size_t sz, int align, uint32* phys);
 void* pmalloc(size_t sz);
+void pfree(size_t sz);
 
 #ifdef	__cplusplus
 }
