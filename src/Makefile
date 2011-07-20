@@ -18,9 +18,10 @@
 
 BIN         = ../bin/cOS
 INCS        = -I"libc" -I"common" -I"."
-DEFINES     = -DWITH_SSE -DWITH_SSE2 -DWITH_APIC #-DWITH_PAE
+DEFINES     = -DWITH_APIC #-DWITH_PAE
 CFLAGS      = $(INCS) $(DEFINES) -Wall -Wextra -nostdlib -nostartfiles \
-              -nodefaultlibs -ffreestanding -m32 -O2
+              -nodefaultlibs -ffreestanding -m32 -O2 -msse -msse2
+# ATTENTION! Code may not work under -O3 optimization!
 OBJP        = ../obj/
 LDFLAGS     = -m elf_i386 -Tlinker.ld
 NASMFLAGS   = -f elf
@@ -35,7 +36,12 @@ CSOURCES    = boot/kcall.c common/io.c hardware/bios/cmos.c kernel/mp/mp.c \
               kernel/kernel.c kernel/gdt/gdt.c kernel/interrupts/idt.c kernel/screen.c \
               kernel/interrupts/int.c kernel/interrupts/irq.c kernel/mem/paging.c \
               kernel/mem/pmalloc.c kernel/res_mgr/res_mgr.c libc/math.c libc/stdio.c \
-              libc/stdlib.c libc/string.c hardware/bios/bda.c kernel/panic.c
+              libc/stdlib.c \
+              \
+              libc/string.c libc/string/strlen.c libc/string/memset.c \
+              libc/string/memclr.c libc/string/memchr.c libc/string/strcpy.c \
+              \
+              hardware/bios/bda.c kernel/panic.c
 NASMSOURCES = boot/boot_hhk.s kernel/gdt/gdt_asm.s kernel/interrupts/idt_asm.s \
               kernel/interrupts/isr.s
 GASSOURCES  = #boot/boot.S

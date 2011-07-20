@@ -3,22 +3,6 @@
 
 extern uint32 cpu_ext_mask;
 
-size_t strlen(const char* str) {
-  int i;
-  for (i = 0; *str; str++, i++);
-  return i;
-}
-
-void* memset(void* ptr, int value, size_t num) {
-  if (value == 0)
-    return memclr(ptr, num);
-  char* p = ptr;
-  char c = value;
-  while (num-- != 0)
-    *(p + c) = c;
-  return ptr;
-}
-
 void* memmove(void* destination, const void* source, size_t num) {
   size_t n = num;
   const char* src = source;
@@ -36,33 +20,14 @@ void* memmove(void* destination, const void* source, size_t num) {
   return destination;
 }
 
-void* memclr(void* ptr, size_t num) {
-  asm("rep stosl;" : : "a"(0), "D" ((size_t) ptr), "c" (num / 4));
-  asm("rep stosb;" : : "a"(0), "D" (((size_t) ptr) + ((num / 4) * 4)),
-     "c" (num - ((num / 4) * 4)));
-  return (void*) ((size_t) ptr + num);
-}
-
-void* memchr(const void* ptr, int value, size_t num) {
-  const char* p = ptr;
-  char c = value;
-  while (num-- != 0) {
-    if (*(p + num) == c)
-      return (void*) p + num;
-  }
-  return NULL;
-}
-
-void* memcpy(void* destination, const void* src, size_t sz) {
+void* memcpy(register void* destination, register const void* src, register size_t sz) {
   void* dest = destination;
-  #ifdef WITH_SSE2
+  #ifdef __SSE2__
   if (CPU_EXT(SSE2)) {
     // SSE way, freaking fast
     register char r = 0x10 - (((long unsigned int) dest) & 0xF);
     if (r != 0x10) {
-      asm(
-        "rep movsb \n\t"
-        : : "c" (r), "S" (src), "D" (dest) :);
+      asm("rep movsb" : : "c" (r), "S" (src), "D" (dest) :);
       dest += r;
       src += r;
       sz -= r;
@@ -90,16 +55,14 @@ void* memcpy(void* destination, const void* src, size_t sz) {
       dest += 128;
     }
     if (sz > 0)
-      --sz;
-    asm(
-      "rep movsb \n\t"
-      : : "c" (sz), "S" (src), "D" (dest) :);
+      --sz; // I don't really know why, otherwise it won't work
+    asm("rep movsb" : : "c" (sz), "S" (src), "D" (dest) :);
   }
   else {
   #endif
     // non-SSE way
-    asm("rep movsb \n\t" : : "c" (sz), "S" (src), "D" (dest) :);
-  #ifdef WITH_SSE
+    asm("rep movsb" : : "c" (sz), "S" (src), "D" (dest) :);
+  #ifdef __SSE2__
   }
   #endif
   return destination;
@@ -112,6 +75,7 @@ char* strcat(char* destination, const char* source) {
 }
 
 int strcmp(const char* str1, const char* str2) {
+  // TODO: MMX/SSE!
   for (; *str1 && *str2; str1++, str2++) {
     if (*str1 > *str2)
       return 1;
@@ -126,6 +90,7 @@ int strcmp(const char* str1, const char* str2) {
 }
 
 int strncmp(const char* str1, const char* str2, size_t num) {
+  // TODO: MMX/SSE!
   size_t i;
   char c1, c2;
   for (i = 0; i < num; i++) {
@@ -139,11 +104,6 @@ int strncmp(const char* str1, const char* str2, size_t num) {
       return 0;
   }
   return 0;
-}
-
-char* strcpy(char* destination, const char* source) {
-  while ((*destination++ = *source++) != 0);
-  return destination;
 }
 
 char* strchr(const char* str, int character) {

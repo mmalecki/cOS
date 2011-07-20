@@ -146,7 +146,7 @@ double floor(double x) {
 
 
 int trunc(float x) {
-  #ifdef WITH_SSE 
+  #ifdef __SSE__
   if (CPU_EXT(SSE)) {
     register int r;
     asm("cvttss2si %1, %0" : "=r" (r) : "m" (x));

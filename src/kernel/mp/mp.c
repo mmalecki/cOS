@@ -61,6 +61,8 @@ mp_conf_table_t* mp_get_conf_table() {
        * it assumes that whole memory is identity-mapped. It just sounds better.
        * The second thing is, that *here* (in a mean of time) almost whole memory
        * *should* be identity-mapped.
+       *
+       * This uint64 conversion is just to be strict with 64 bits.
        */
       if (strncmp(mp_conf_table->signature, "PCMP", 4) == 0)
         return mp_conf_table;

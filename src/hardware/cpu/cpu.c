@@ -47,10 +47,10 @@ int cpu_init(int partial_init) {
       cpu_info->type);
     kputs(buf);
     kputs("   This build supports CPU features:\n");
-    #ifdef WITH_SSE  
+    #ifdef __SSE__
       CPU_FEAT_INFO(SSE)
     #endif
-    #ifdef WITH_SSE2 
+    #ifdef __SSE2__
       CPU_FEAT_INFO(SSE2)
     #endif
     #ifdef WITH_APIC 
