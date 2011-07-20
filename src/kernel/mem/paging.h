@@ -45,6 +45,7 @@ extern "C" {
 #define PAGING_4MB             (1 << 1)
 #define PAGING_PAE             (1 << 2)
 
+void paging_map(void* dir, uint64 phys, uint64 virt, uint64 size, uint8 opt);
 void paging_create_empty_directory(uint32* dir);
 uint32* paging_create_page_table(uint32 bitmask, uint32 startaddr);
 void paging_init();

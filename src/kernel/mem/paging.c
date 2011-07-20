@@ -26,6 +26,10 @@ uint64* kernel_page_dir_ptr;
 
 extern uint32 cpu_ext_mask;
 
+void paging_map_pae(void* dir, uint64 phys, uint64 virt, uint64 size, uint8 opt);
+void paging_map_4mb(void* dir, uint64 phys, uint64 virt, uint64 size, uint8 opt);
+void paging_map_legacy(void* dir, uint64 phys, uint64 virt, uint64 size, uint8 opt);
+
 void paging_pae_enable();
 uint64* paging_pae_create_directory_ptr();
 uint64* paging_pae_create_directory(uint64 start_addr, uint32 bitmask, uint32 pt_bitmask);
@@ -49,11 +53,11 @@ void paging_map_4mb(void* dir, uint64 phys, uint64 virt, uint64 size, uint8 opt)
 }
 
 void paging_map_legacy(void* dir, uint64 phys, uint64 virt, uint64 size, uint8 opt) {
-  uint32 dir = virt >> 22;
-  virt -= dir << 22;
-  uint32 table = virt >> 12;
-  virt -= table << 12;
-  uint32 page = virt >> 10;
+  uint32 dirn = virt >> 22;
+  virt -= dirn << 22;
+  uint32 tablen = virt >> 12;
+  virt -= tablen << 12;
+  uint32 pagen = virt >> 10;
 }
 
 void paging_create_directory(uint32* dir) {
@@ -156,29 +160,6 @@ void paging_enable() {
     "or  $0x80000000, %%eax \n\t"
     "mov %%eax,       %%cr0 \n\t"
   : : : "eax");
-}
-
-uint8 paging_map_mem(void* dir, uint32 start_addr, uint32 end_addr, uint32 phys_addr) {
-  int dirn, tabn;
-  
-  if ((start_addr & 0xfff) || (end_addr & 0xfff))
-    return 1;
-  #ifdef WITH_PAE
-  if (CPU_EXT(PAE)) {
-    int ptr = start_addr >> 30;
-    start_addr -= ptr << 30;
-    dirn = start_addr >> 21;
-    start_addr -= dirn << 21;
-    tabn = start_addr >> 12;
-    start_addr -= tabn << 12;
-  }
-  else {
-  #endif
-  
-  #ifdef WITH_PAE
-  }
-  #endif
-  return 0;
 }
 
 #ifdef WITH_PAE
